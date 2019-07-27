@@ -19,10 +19,10 @@
 ##############################################################################
 
 {
-    'name': 'test12',
-    'version': '12.0.0.0.0',
+    'name': 'test12e',
+    'version': '12.0e.0.0.0',
     'category': 'Tools',
-    'summary': "Test for v12 CE",
+    'summary': "Test for v12 EE",
     'author': "jeo Software",
     'website': 'http://github.com/jobiols/module-repo',
     'license': 'AGPL-3',
@@ -38,7 +38,7 @@
         {'usr': 'jobiols', 'repo': 'cl-test', 'branch': '12.0'},
     ],
     'docker': [
-        {'name': 'odoo', 'usr': 'jobiols', 'img': 'odoo-jeo', 'ver': '12.0'},
+        {'name': 'odoo', 'usr': 'jobiols', 'img': 'odoo-ent', 'ver': '12.0e'},
         {'name': 'postgres', 'usr': 'postgres', 'ver': '10.1-alpine'},
     ]
 
