@@ -35,7 +35,7 @@
 
     'port': '8069',
     'repos': [
-        {'usr': 'jobiols', 'repo': 'cl-test', 'branch': '12.0'},
+        {'usr': 'jobiols', 'repo': 'cl-test', 'branch': '12.0e'},
     ],
     'docker': [
         {'name': 'odoo', 'usr': 'jobiols', 'img': 'odoo-ent', 'ver': '12.0e'},
