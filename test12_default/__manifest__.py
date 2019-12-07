@@ -36,43 +36,11 @@
     'port': '8069',
     'repos': [
         {'usr': 'jobiols', 'repo': 'cl-test', 'branch': '12.0'},
-        {'usr': 'jobiols', 'repo': 'odoo-addons', 'branch': '12.0'},
         {'usr': 'xalachi', 'repo': 'fecr', 'branch': '12.0', 'ssh': True},
-
-        {'usr': 'ingadhoc', 'repo': 'odoo-argentina', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'argentina-sale', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'account-financial-tools',
-         'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'account-payment', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'miscellaneous', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'argentina-reporting',
-         'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'reporting-engine', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'aeroo_reports', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'sale', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'odoo-support', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'product', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'stock', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'account-invoicing', 'branch': '12.0'},
-
-        {'usr': 'oca', 'repo': 'partner-contact', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'web', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'server-tools', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'social', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'server-ux', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'server-brand', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'manufacture', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'manufacture-reporting', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'management-system', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'sale-workflow', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'stock-logistics-warehouse', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'stock-logistics-workflow', 'branch': '12.0'},
     ],
     'docker': [
         {'name': 'odoo', 'usr': 'jobiols', 'img': 'odoo-jeo', 'ver': '12.0'},
         {'name': 'postgres', 'usr': 'postgres', 'ver': '10.1-alpine'},
-        {'name': 'nginx', 'usr': 'nginx', 'ver': 'latest'},
-        {'name': 'aeroo', 'usr': 'adhoc', 'img': 'aeroo-docs'},
     ]
 
 }
