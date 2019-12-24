@@ -3,6 +3,7 @@
 {
     'name': 'Paraguayan - Accounting',
     'version': '13.0.0.0.0',
+    'author': 'TecnoproPy',
     'category': 'Localization',
     'description': """
 Paraguayan accounting chart in Odoo.
