@@ -14,9 +14,9 @@ Install paraguayan chart of accounts.
         'account',
     ],
     'data': [
-        'data/l10n_generic_coa.xml',
+        'data/l10n_py.xml',
         'data/account.account.template.csv',
-        'data/l10n_generic_coa_post.xml',
+        'data/l10n_py_post.xml',
     ],
     'demo': [
         'demo/account_bank_statement_demo.xml',

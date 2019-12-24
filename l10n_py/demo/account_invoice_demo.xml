@@ -91,7 +91,7 @@
         <!-- ==== Create attachments for posted invoices ==== -->
         <record id="ir_attachment_out_invoice_draft_1" model="ir.attachment">
             <field name="type">binary</field>
-            <field name="datas" type="base64" file="l10n_generic_coa/static/src/demo/out_invoice_yourcompany_demo_1.pdf"/>
+            <field name="datas" type="base64" file="l10n_py/static/src/demo/out_invoice_yourcompany_demo_1.pdf"/>
             <field name="name">out_invoice_yourcompany_demo.pdf</field>
             <field name="res_model">account.move</field>
             <field name="res_id" ref="demo_invoice_1"/>
@@ -103,7 +103,7 @@
 
         <record id="mail_message_out_invoice_1" model="mail.message">
             <field name="model">account.move</field>
-            <field name="res_id" ref="l10n_generic_coa.demo_invoice_1"/>
+            <field name="res_id" ref="l10n_py.demo_invoice_1"/>
             <field name="body">Customer Invoice attachment</field>
             <field name="message_type">comment</field>
             <field name="author_id" ref="base.partner_demo"/>
@@ -112,7 +112,7 @@
 
         <record id="ir_attachment_out_invoice_draft_2" model="ir.attachment">
             <field name="type">binary</field>
-            <field name="datas" type="base64" file="l10n_generic_coa/static/src/demo/out_invoice_yourcompany_demo_2.pdf"/>
+            <field name="datas" type="base64" file="l10n_py/static/src/demo/out_invoice_yourcompany_demo_2.pdf"/>
             <field name="name">out_invoice_yourcompany_demo.pdf</field>
             <field name="res_model">account.move</field>
             <field name="res_id" ref="demo_invoice_2"/>
@@ -124,7 +124,7 @@
 
         <record id="mail_message_out_invoice_2" model="mail.message">
             <field name="model">account.move</field>
-            <field name="res_id" ref="l10n_generic_coa.demo_invoice_2"/>
+            <field name="res_id" ref="l10n_py.demo_invoice_2"/>
             <field name="body">Customer Invoice attachment</field>
             <field name="message_type">comment</field>
             <field name="author_id" ref="base.partner_demo"/>
@@ -133,7 +133,7 @@
 
         <record id="ir_attachment_out_invoice_draft_3" model="ir.attachment">
             <field name="type">binary</field>
-            <field name="datas" type="base64" file="l10n_generic_coa/static/src/demo/out_invoice_yourcompany_demo_3.pdf"/>
+            <field name="datas" type="base64" file="l10n_py/static/src/demo/out_invoice_yourcompany_demo_3.pdf"/>
             <field name="name">out_invoice_yourcompany_demo.pdf</field>
             <field name="res_model">account.move</field>
             <field name="res_id" ref="demo_invoice_3"/>
@@ -145,7 +145,7 @@
 
         <record id="mail_message_out_invoice_3" model="mail.message">
             <field name="model">account.move</field>
-            <field name="res_id" ref="l10n_generic_coa.demo_invoice_3"/>
+            <field name="res_id" ref="l10n_py.demo_invoice_3"/>
             <field name="body">Customer Invoice attachment</field>
             <field name="message_type">comment</field>
             <field name="author_id" ref="base.partner_demo"/>
@@ -154,7 +154,7 @@
 
         <record id="ir_attachment_out_invoice_draft_4" model="ir.attachment">
             <field name="type">binary</field>
-            <field name="datas" type="base64" file="l10n_generic_coa/static/src/demo/out_invoice_yourcompany_demo_4.pdf"/>
+            <field name="datas" type="base64" file="l10n_py/static/src/demo/out_invoice_yourcompany_demo_4.pdf"/>
             <field name="name">out_invoice_yourcompany_demo.pdf</field>
             <field name="res_model">account.move</field>
             <field name="res_id" ref="demo_invoice_followup"/>
@@ -166,7 +166,7 @@
 
         <record id="mail_message_out_invoice_4" model="mail.message">
             <field name="model">account.move</field>
-            <field name="res_id" ref="l10n_generic_coa.demo_invoice_followup"/>
+            <field name="res_id" ref="l10n_py.demo_invoice_followup"/>
             <field name="body">Customer Invoice attachment</field>
             <field name="message_type">comment</field>
             <field name="author_id" ref="base.partner_demo"/>
@@ -175,7 +175,7 @@
 
         <record id="ir_attachment_in_invoice_1" model="ir.attachment">
             <field name="type">binary</field>
-            <field name="datas" type="base64" file="l10n_generic_coa/static/src/demo/in_invoice_yourcompany_demo_1.pdf"/>
+            <field name="datas" type="base64" file="l10n_py/static/src/demo/in_invoice_yourcompany_demo_1.pdf"/>
             <field name="name">in_invoice_yourcompany_demo.pdf</field>
             <field name="res_model">account.move</field>
             <field name="res_id" ref="demo_invoice_extract"/>
@@ -187,7 +187,7 @@
 
         <record id="mail_message_in_invoice_1" model="mail.message">
             <field name="model">account.move</field>
-            <field name="res_id" ref="l10n_generic_coa.demo_invoice_extract"/>
+            <field name="res_id" ref="l10n_py.demo_invoice_extract"/>
             <field name="body">Vendor Bill attachment</field>
             <field name="message_type">comment</field>
             <field name="author_id" ref="base.partner_demo"/>
@@ -196,7 +196,7 @@
 
         <record id="ir_attachment_in_invoice_2" model="ir.attachment">
             <field name="type">binary</field>
-            <field name="datas" type="base64" file="l10n_generic_coa/static/src/demo/in_invoice_yourcompany_demo_2.pdf"/>
+            <field name="datas" type="base64" file="l10n_py/static/src/demo/in_invoice_yourcompany_demo_2.pdf"/>
             <field name="name">in_invoice_yourcompany_demo.pdf</field>
             <field name="res_model">account.move</field>
             <field name="res_id" ref="demo_invoice_equipment_purchase"/>
@@ -208,7 +208,7 @@
 
         <record id="mail_message_in_invoice_2" model="mail.message">
             <field name="model">account.move</field>
-            <field name="res_id" ref="l10n_generic_coa.demo_invoice_equipment_purchase"/>
+            <field name="res_id" ref="l10n_py.demo_invoice_equipment_purchase"/>
             <field name="body">Vendor Bill attachment</field>
             <field name="message_type">comment</field>
             <field name="author_id" ref="base.partner_demo"/>

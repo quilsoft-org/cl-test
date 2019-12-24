@@ -90,6 +90,6 @@
 
     <!-- Try to instanciate for relevant companies -->
     <function model="account.chart.template" name="try_loading">
-        <value eval="[ref('l10n_generic_coa.configurable_chart_template')]"/>
+        <value eval="[ref('l10n_py.configurable_chart_template')]"/>
     </function>
 </odoo>
