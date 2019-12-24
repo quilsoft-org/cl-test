@@ -19,10 +19,10 @@
 ##############################################################################
 
 {
-    'name': 'test13',
-    'version': '13.0.0.0.0',
+    'name': 'test13e',
+    'version': '13.0e.0.0.0',
     'category': 'Tools',
-    'summary': "Test for v13 CE",
+    'summary': "Test for v13 EE",
     'author': "jeo Software",
     'website': 'http://github.com/jobiols/module-repo',
     'license': 'AGPL-3',
@@ -52,7 +52,7 @@
         {'usr': 'oca', 'repo': 'stock-logistics-workflow', 'branch': '13.0'},
     ],
     'docker': [
-        {'name': 'odoo', 'usr': 'jobiols', 'img': 'odoo-jeo', 'ver': '13.0'},
+        {'name': 'odoo', 'usr': 'jobiols', 'img': 'odoo-ent', 'ver': '13.0e'},
         {'name': 'postgres', 'usr': 'postgres', 'ver': '10.1-alpine'},
         {'name': 'nginx', 'usr': 'nginx', 'ver': 'latest'},
         {'name': 'aeroo', 'usr': 'jobiols', 'img': 'aeroo-docs'},
