@@ -22,6 +22,7 @@ Install paraguayan chart of accounts.
         'demo/account_bank_statement_demo.xml',
         'demo/account_invoice_demo.xml',
         'demo/account_reconcile_model.xml',
+        'data/account_chart_template_data.xml',
     ],
     'uninstall_hook': 'uninstall_hook',
 }
