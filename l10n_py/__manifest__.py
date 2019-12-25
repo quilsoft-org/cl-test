@@ -1,16 +1,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Paraguayan - Accounting',
+    'name': 'Contabilidad Paraguay',
     'version': '13.0.0.0.0',
     'author': 'TecnoproPy',
-    'category': 'Localization',
-    'description': """
-Paraguayan accounting chart in Odoo.
-====================================
-
-Install paraguayan chart of accounts.
-    """,
+    'category': 'Localizacion',
     'depends': [
         'account',
     ],

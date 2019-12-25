@@ -1,14 +1,14 @@
 {
-    'name': 'Paraguayan Document Types',
+    'name': 'Tipos de documentos Paraguay',
     'version': '13.0.0.0.0',
-    'category': 'Localization',
+    'category': 'Localizacion',
     'sequence': 14,
     'author': 'TecnoproPy',
     'website': '',
     'license': 'AGPL-3',
     'summary': '',
     'depends': [
-        'base'
+        'l10n_latam_invoice_document'
     ],
     'external_dependencies': {
     },
