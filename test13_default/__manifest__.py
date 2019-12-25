@@ -15,7 +15,7 @@
 #
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#   le agregamos esto
+#
 ##############################################################################
 
 {
@@ -36,20 +36,6 @@
     'port': '8069',
     'repos': [
         {'usr': 'jobiols', 'repo': 'cl-test', 'branch': '13.0'},
-        {'usr': 'jobiols', 'repo': 'odoo-addons', 'branch': '13.0'},
-
-        {'usr': 'oca', 'repo': 'partner-contact', 'branch': '13.0'},
-        {'usr': 'oca', 'repo': 'web', 'branch': '13.0'},
-        {'usr': 'oca', 'repo': 'server-tools', 'branch': '13.0'},
-        {'usr': 'oca', 'repo': 'social', 'branch': '13.0'},
-        {'usr': 'oca', 'repo': 'server-ux', 'branch': '13.0'},
-        {'usr': 'oca', 'repo': 'server-brand', 'branch': '13.0'},
-        {'usr': 'oca', 'repo': 'manufacture', 'branch': '13.0'},
-        {'usr': 'oca', 'repo': 'manufacture-reporting', 'branch': '13.0'},
-        {'usr': 'oca', 'repo': 'management-system', 'branch': '13.0'},
-        {'usr': 'oca', 'repo': 'sale-workflow', 'branch': '13.0'},
-        {'usr': 'oca', 'repo': 'stock-logistics-warehouse', 'branch': '13.0'},
-        {'usr': 'oca', 'repo': 'stock-logistics-workflow', 'branch': '13.0'},
     ],
     'docker': [
         {'name': 'odoo', 'usr': 'jobiols', 'img': 'odoo-ent', 'ver': '13.0e'},
