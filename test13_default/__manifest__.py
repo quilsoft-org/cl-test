@@ -36,7 +36,7 @@
     'port': '8069',
     'repos': [
         {'usr': 'jobiols', 'repo': 'cl-test', 'branch': '13.0'},
-        {'usr': 'jobiols', 'repo': 'odoo-paraguay', 'branch': '13.0.lobro-de-iva', 'ssh': True},
+        {'usr': 'jobiols', 'repo': 'odoo-paraguay', 'branch': '13.0.libro-de-iva', 'ssh': True},
     ],
     'docker': [
         {'name': 'odoo', 'usr': 'jobiols', 'img': 'odoo-ent', 'ver': '13.0e'},
