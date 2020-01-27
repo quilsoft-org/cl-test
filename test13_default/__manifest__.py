@@ -36,6 +36,7 @@
     'port': '8069',
     'repos': [
         {'usr': 'jobiols', 'repo': 'cl-test', 'branch': '13.0'},
+        {'usr': 'jobiols', 'repo': 'odoo-addons', 'branch': '13.0'},
         {'usr': 'TecnoproPy', 'repo': 'odoo-paraguay', 'branch': '13.0'},
 
     ],
