@@ -15,7 +15,7 @@
 #
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#   le agregamos esto
+#
 ##############################################################################
 
 {
@@ -36,7 +36,7 @@
     'port': '8069',
     'repos': [
         {'usr': 'jobiols', 'repo': 'cl-test', 'branch': '12.0'},
-        {'usr': 'xalachi', 'repo': 'fecr', 'branch': '12.0', 'ssh': True},
+        {'usr': 'jobiols', 'repo': 'odoo-etl', 'branch': '12.0'},
     ],
     'docker': [
         {'name': 'odoo', 'usr': 'jobiols', 'img': 'odoo-jeo', 'ver': '12.0'},
