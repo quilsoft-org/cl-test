@@ -49,7 +49,6 @@
         {'usr': 'ingadhoc', 'repo': 'reporting-engine', 'branch': '13.0'},
         {'usr': 'ingadhoc', 'repo': 'aeroo_reports', 'branch': '13.0'},
         {'usr': 'ingadhoc', 'repo': 'sale', 'branch': '13.0'},
-        {'usr': 'ingadhoc', 'repo': 'odoo-support', 'branch': '13.0'},
         {'usr': 'ingadhoc', 'repo': 'product', 'branch': '13.0'},
         {'usr': 'ingadhoc', 'repo': 'stock', 'branch': '13.0'},
         {'usr': 'ingadhoc', 'repo': 'account-invoicing', 'branch': '13.0'},
