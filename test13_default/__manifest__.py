@@ -40,7 +40,6 @@
         {'usr': 'jobiols', 'repo': 'odoo-addons', 'branch': '13.0'},
 
         {'usr': 'ingadhoc', 'repo': 'odoo-argentina', 'branch': '13.0'},
-        {'usr': 'ingadhoc', 'repo': 'argentina-sale', 'branch': '13.0'},
         {'usr': 'ingadhoc', 'repo': 'account-financial-tools',
          'branch': '13.0'},
         {'usr': 'ingadhoc', 'repo': 'account-payment', 'branch': '13.0'},
