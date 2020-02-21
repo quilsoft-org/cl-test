@@ -73,5 +73,4 @@
         {'name': 'postgres', 'usr': 'postgres', 'ver': '10.1-alpine'},
         {'name': 'nginx', 'usr': 'nginx', 'ver': 'latest'},
     ]
-
 }
