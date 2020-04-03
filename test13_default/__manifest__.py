@@ -54,7 +54,7 @@
 
     # list of url repos to install in the form 'repo-url directory'
     'git-repos': [
-        'https://github.com/jobiols/cl-test.git',
+        'https://github.com/jobiols/cl-test.git -b 13.0e',
         'https://github.com/jobiols/odoo-addons.git',
 
         'https://github.com/ingadhoc/odoo-argentina.git',
