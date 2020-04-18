@@ -20,7 +20,7 @@
 
 {
     'name': 'test12e',
-    'version': '12.0e.0.0.0',
+    'version': '12.0.0.0.0',
     'category': 'Tools',
     'summary': "Test for v12 EE",
     'author': "jeo Software",
@@ -31,53 +31,74 @@
     'data': [
     ],
     'installable': True,
-    'application': False,
+    'application': True,
 
+    'CPUs': '2',
+    'limit_request': '8196',
+    'limit_memory_soft': '640000000',
+    'limit_memory_hard': '760000000',
+    'limit_time_cpu': '60',
+    'limit_time_real': '120',
+
+    # Here begins odoo-env manifest configuration
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    # manifest version, if omitted it is backward compatible
+    'env-ver': '2',
+
+    # if Enterprise it installs in a different directory than community
+    'odoo-license': 'EE',
+
+    # port where odoo starts serving pages
     'port': '8069',
-    'repos': [
-        {'usr': 'jobiols', 'repo': 'cl-test', 'branch': '12.0e'},
-        {'usr': 'jobiols', 'repo': 'odoo-addons', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'odoo-argentina', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'argentina-sale', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'account-financial-tools',
-         'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'account-payment', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'miscellaneous', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'argentina-reporting',
-         'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'reporting-engine', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'aeroo_reports', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'sale', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'odoo-support', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'product', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'stock', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'account-invoicing', 'branch': '12.0'},
-        {'usr': 'ingadhoc', 'repo': 'website', 'branch': '12.0'},
 
-        {'usr': 'oca', 'repo': 'partner-contact', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'web', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'server-tools', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'social', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'server-ux', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'manufacture', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'manufacture-reporting', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'management-system', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'sale-workflow', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'stock-logistics-warehouse', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'stock-logistics-workflow', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'commission', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'l10n-netherlands', 'branch': '12.0'},
-        {'usr': 'oca', 'repo': 'account-financial-reporting',
-         'branch': '12.0'},
+    # list of url repos to install in the form 'repo-url directory'
+    'git-repos': [
+        'https://github.com/jobiols/cl-test.git -b 12.0e',
+        'git@github.com:jobiols/odoo-etl.git',
+
+#        {'usr': 'jobiols', 'repo': 'odoo-addons', 'branch': '12.0'},
+#        {'usr': 'ingadhoc', 'repo': 'odoo-argentina', 'branch': '12.0'},
+#        {'usr': 'ingadhoc', 'repo': 'argentina-sale', 'branch': '12.0'},
+#        {'usr': 'ingadhoc', 'repo': 'account-financial-tools',
+#         'branch': '12.0'},
+#        {'usr': 'ingadhoc', 'repo': 'account-payment', 'branch': '12.0'},
+#        {'usr': 'ingadhoc', 'repo': 'miscellaneous', 'branch': '12.0'},
+#        {'usr': 'ingadhoc', 'repo': 'argentina-reporting',
+#         'branch': '12.0'},
+#        {'usr': 'ingadhoc', 'repo': 'reporting-engine', 'branch': '12.0'},
+#        {'usr': 'ingadhoc', 'repo': 'aeroo_reports', 'branch': '12.0'},
+#        {'usr': 'ingadhoc', 'repo': 'sale', 'branch': '12.0'},
+#        {'usr': 'ingadhoc', 'repo': 'odoo-support', 'branch': '12.0'},
+#        {'usr': 'ingadhoc', 'repo': 'product', 'branch': '12.0'},
+#        {'usr': 'ingadhoc', 'repo': 'stock', 'branch': '12.0'},
+#        {'usr': 'ingadhoc', 'repo': 'account-invoicing', 'branch': '12.0'},
+#        {'usr': 'ingadhoc', 'repo': 'website', 'branch': '12.0'},
+
+#        {'usr': 'oca', 'repo': 'partner-contact', 'branch': '12.0'},
+#        {'usr': 'oca', 'repo': 'web', 'branch': '12.0'},
+#        {'usr': 'oca', 'repo': 'server-tools', 'branch': '12.0'},
+#        {'usr': 'oca', 'repo': 'social', 'branch': '12.0'},
+#        {'usr': 'oca', 'repo': 'server-ux', 'branch': '12.0'},
+#        {'usr': 'oca', 'repo': 'manufacture', 'branch': '12.0'},
+#        {'usr': 'oca', 'repo': 'manufacture-reporting', 'branch': '12.0'},
+#        {'usr': 'oca', 'repo': 'management-system', 'branch': '12.0'},
+#        {'usr': 'oca', 'repo': 'sale-workflow', 'branch': '12.0'},
+#        {'usr': 'oca', 'repo': 'stock-logistics-warehouse', 'branch': '12.0'},
+#        {'usr': 'oca', 'repo': 'stock-logistics-workflow', 'branch': '12.0'},
+#        {'usr': 'oca', 'repo': 'commission', 'branch': '12.0'},
+#        {'usr': 'oca', 'repo': 'l10n-netherlands', 'branch': '12.0'},
+#        {'usr': 'oca', 'repo': 'account-financial-reporting',
+#         'branch': '12.0'},
         # backup to s3
-        {'usr': 'it-projects-llc', 'repo': 'misc-addons', 'branch': '12.0'},
+#        {'usr': 'it-projects-llc', 'repo': 'misc-addons', 'branch': '12.0'},
 
     ],
-    'docker': [
-        {'name': 'odoo', 'usr': 'jobiols', 'img': 'odoo-ent', 'ver': '12.0e'},
-        {'name': 'postgres', 'usr': 'postgres', 'ver': '10.1-alpine'},
-        {'name': 'nginx', 'usr': 'nginx', 'ver': 'latest'},
-        {'name': 'aeroo', 'usr': 'jobiols', 'img': 'aeroo-docs'},
+    # list of images to use in the form 'name image-url'
+    'docker-images': [
+        'odoo jobiols/odoo-ent:12.0e',
+        'postgres postgres:10.1-alpine',
+        'nginx nginx'
     ]
 
 }
