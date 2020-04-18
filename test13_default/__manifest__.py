@@ -31,7 +31,7 @@
     'data': [
     ],
     'installable': True,
-    'application': False,
+    'application': True,
 
     'CPUs': '2',
     'limit_request': '8196',
