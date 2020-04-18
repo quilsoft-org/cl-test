@@ -47,7 +47,7 @@
     'env-ver': '2',
 
     # if Enterprise it installs in a different directory than community
-    'license': 'EE',
+    'odoo-license': 'EE',
 
     # port where odoo starts serving pages
     'port': '8069',
@@ -55,6 +55,8 @@
     # list of url repos to install in the form 'repo-url directory'
     'git-repos': [
         'https://github.com/jobiols/cl-test.git -b 13.0e',
+        'git@github.com:jobiols/odoo-etl.git',
+
         'https://github.com/jobiols/odoo-addons.git',
 
         'https://github.com/ingadhoc/odoo-argentina.git',
