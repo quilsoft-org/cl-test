@@ -58,6 +58,8 @@
     'git-repos': [
         'https://github.com/jobiols/cl-test.git',
 
+        'git@github.com:jobiols/odoo-uml.git',
+
         'https://github.com/jobiols/odoo-addons.git',
 
         'https://github.com/ingadhoc/odoo-argentina.git',
