@@ -12,7 +12,7 @@
 PROJECT NAME
 ============
 
-This module is a test for odoo 11
+This module is a test for odoo 9
 
 Maintainer
 ----------
