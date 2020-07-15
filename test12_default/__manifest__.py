@@ -54,7 +54,8 @@
 
     # list of url repos to install in the form 'repo-url directory'
     'git-repos': [
-        'https://github.com/jobiols/cl-test.git',
+        'git@github.com:jobiols/cl-test.git',
+        'git@github.com:jobiols/odoo-addons.git'
     ],
 
     # list of images to use in the form 'name image-url'
