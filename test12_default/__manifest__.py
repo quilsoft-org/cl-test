@@ -1,6 +1,6 @@
 ##############################################################################
 #
-#    Copyright (C) 2018  jeo Software  (http://www.jeosoft.com.ar)
+#    Copyright (C) 2020  jeo Software  (http://www.jeosoft.com.ar)
 #    All Rights Reserved.
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -55,38 +55,11 @@
     # list of url repos to install in the form 'repo-url directory'
     'git-repos': [
         'https://github.com/jobiols/cl-test.git',
-        'git@github.com:jobiols/odoo-etl.git',
-
-        'https://github.com/jobiols/odoo-addons.git',
-
-        'https://github.com/ingadhoc/odoo-argentina.git',
-        'https://github.com/ingadhoc/account-financial-tools.git',
-        'https://github.com/ingadhoc/account-payment.git',
-        'https://github.com/ingadhoc/miscellaneous.git',
-        'https://github.com/ingadhoc/argentina-reporting.git',
-        'https://github.com/ingadhoc/reporting-engine.git',
-        'https://github.com/ingadhoc/aeroo_reports.git',
-        'https://github.com/ingadhoc/sale.git',
-        'https://github.com/ingadhoc/product.git',
-        'https://github.com/ingadhoc/account-invoicing.git',
-
-        'https://github.com/oca/partner-contact.git',
-        'https://github.com/oca/web.git',
-        'https://github.com/oca/server-tools.git',
-        'https://github.com/oca/social.git',
-        'https://github.com/oca/server-ux.git',
-        'https://github.com/oca/server-brand.git',
-        'https://github.com/oca/manufacture.git',
-        'https://github.com/oca/manufacture-reporting.git',
-        'https://github.com/oca/management-system.git',
-        'https://github.com/oca/sale-workflow.git',
-        'https://github.com/oca/stock-logistics-warehouse.git',
-        'https://github.com/oca/stock-logistics-workflow.git'
     ],
 
     # list of images to use in the form 'name image-url'
     'docker-images': [
-        'odoo jobiols/odoo-ent:13.0e',
+        'odoo jobiols/odoo-jeo:12.0',
         'postgres postgres:10.1-alpine',
         'nginx nginx'
     ]
