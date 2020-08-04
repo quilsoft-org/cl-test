@@ -12,7 +12,6 @@
 TEST V13
 ========
 
-
 |company_logo|
 
 This module is maintained by |company|.
