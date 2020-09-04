@@ -1,6 +1,6 @@
 ##############################################################################
 #
-#    Copyright (C) 2018  jeo Software  (http://www.jeosoft.com.ar)
+#    Copyright (C) 2020 jeo Software  (http://www.jeosoft.com.ar)
 #    All Rights Reserved.
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -24,7 +24,7 @@
     'category': 'Tools',
     'summary': "Test for v12 EE",
     'author': "jeo Software",
-    'website': 'http://github.com/jobiols/module-repo',
+    'website': 'http://github.com/jobiols/cl-test',
     'license': 'AGPL-3',
     'depends': [
     ],
@@ -56,42 +56,6 @@
     'git-repos': [
         'https://github.com/jobiols/cl-test.git -b 12.0e',
         'git@github.com:jobiols/odoo-etl.git',
-
-#        {'usr': 'jobiols', 'repo': 'odoo-addons', 'branch': '12.0'},
-#        {'usr': 'ingadhoc', 'repo': 'odoo-argentina', 'branch': '12.0'},
-#        {'usr': 'ingadhoc', 'repo': 'argentina-sale', 'branch': '12.0'},
-#        {'usr': 'ingadhoc', 'repo': 'account-financial-tools',
-#         'branch': '12.0'},
-#        {'usr': 'ingadhoc', 'repo': 'account-payment', 'branch': '12.0'},
-#        {'usr': 'ingadhoc', 'repo': 'miscellaneous', 'branch': '12.0'},
-#        {'usr': 'ingadhoc', 'repo': 'argentina-reporting',
-#         'branch': '12.0'},
-#        {'usr': 'ingadhoc', 'repo': 'reporting-engine', 'branch': '12.0'},
-#        {'usr': 'ingadhoc', 'repo': 'aeroo_reports', 'branch': '12.0'},
-#        {'usr': 'ingadhoc', 'repo': 'sale', 'branch': '12.0'},
-#        {'usr': 'ingadhoc', 'repo': 'odoo-support', 'branch': '12.0'},
-#        {'usr': 'ingadhoc', 'repo': 'product', 'branch': '12.0'},
-#        {'usr': 'ingadhoc', 'repo': 'stock', 'branch': '12.0'},
-#        {'usr': 'ingadhoc', 'repo': 'account-invoicing', 'branch': '12.0'},
-#        {'usr': 'ingadhoc', 'repo': 'website', 'branch': '12.0'},
-
-#        {'usr': 'oca', 'repo': 'partner-contact', 'branch': '12.0'},
-#        {'usr': 'oca', 'repo': 'web', 'branch': '12.0'},
-#        {'usr': 'oca', 'repo': 'server-tools', 'branch': '12.0'},
-#        {'usr': 'oca', 'repo': 'social', 'branch': '12.0'},
-#        {'usr': 'oca', 'repo': 'server-ux', 'branch': '12.0'},
-#        {'usr': 'oca', 'repo': 'manufacture', 'branch': '12.0'},
-#        {'usr': 'oca', 'repo': 'manufacture-reporting', 'branch': '12.0'},
-#        {'usr': 'oca', 'repo': 'management-system', 'branch': '12.0'},
-#        {'usr': 'oca', 'repo': 'sale-workflow', 'branch': '12.0'},
-#        {'usr': 'oca', 'repo': 'stock-logistics-warehouse', 'branch': '12.0'},
-#        {'usr': 'oca', 'repo': 'stock-logistics-workflow', 'branch': '12.0'},
-#        {'usr': 'oca', 'repo': 'commission', 'branch': '12.0'},
-#        {'usr': 'oca', 'repo': 'l10n-netherlands', 'branch': '12.0'},
-#        {'usr': 'oca', 'repo': 'account-financial-reporting',
-#         'branch': '12.0'},
-        # backup to s3
-#        {'usr': 'it-projects-llc', 'repo': 'misc-addons', 'branch': '12.0'},
 
     ],
     # list of images to use in the form 'name image-url'
