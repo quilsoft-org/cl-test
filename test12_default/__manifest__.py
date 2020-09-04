@@ -55,7 +55,16 @@
     # list of url repos to install in the form 'repo-url directory'
     'git-repos': [
         'git@github.com:jobiols/cl-test.git',
-        'git@github.com:jobiols/odoo-addons.git'
+        'git@github.com:jobiols/odoo-etl.git',
+
+        'git@github.com:jobiols/odoo-addons.git',
+        'git@github.com:ingadhoc/odoo-argentina.git',
+        'git@github.com:ingadhoc/account-financial-tools.git',
+        'git@github.com:ingadhoc/miscellaneous.git',
+        'git@github.com:ingadhoc/account-payment.git',
+                
+        'git@github.com:oca/partner-contact.git',
+        'git@github.com:oca/web.git',
     ],
 
     # list of images to use in the form 'name image-url'
