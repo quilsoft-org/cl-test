@@ -74,6 +74,8 @@
         # oca para localizacion
         'https://github.com/oca/web',
 
+        # adicionales oca
+        'https://github.com/oca/account-analytic.git',
     ],
 
     # list of images to use in the form 'name image-url'
