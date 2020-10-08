@@ -55,15 +55,13 @@
     # list of url repos to install in the form 'repo-url directory'
     'git-repos': [
         'git@github.com:jobiols/cl-test.git',
-        'git@github.com:jobiols/odoo-etl.git',
 
-        'git@github.com:jobiols/odoo-addons.git',
-        'git@github.com:ingadhoc/odoo-argentina.git',
-        'git@github.com:ingadhoc/account-financial-tools.git',
-        'git@github.com:ingadhoc/miscellaneous.git',
-        'git@github.com:ingadhoc/account-payment.git',
-                
-        'git@github.com:oca/partner-contact.git',
+        # para localizacion argentina
+        'https://github.com/ingadhoc/odoo-argentina.git',
+        'https://github.com/ingadhoc/account-payment.git',
+        'https://github.com/ingadhoc/account-financial-tools.git',
+
+        'git@github.com:oca/project.git',
         'git@github.com:oca/web.git',
     ],
 
