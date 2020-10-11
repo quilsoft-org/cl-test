@@ -57,6 +57,7 @@
         # proyecto
         'https://github.com/jobiols/cl-test.git -b 13.0e',
         'https://github.com/jobiols/jeo-enterprise.git',
+        'https://github.com/ingadhoc/sale.git'
 
         # contiene standard depends
         'https://github.com/jobiols/odoo-addons.git',
