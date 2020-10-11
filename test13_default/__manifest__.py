@@ -76,6 +76,7 @@
 
         # adicionales oca
         'https://github.com/oca/account-analytic.git',
+        'https://github.com/jobiols/project.git',
     ],
 
     # list of images to use in the form 'name image-url'
