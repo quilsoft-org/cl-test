@@ -55,8 +55,8 @@
     # list of url repos to install in the form 'repo-url directory'
     'git-repos': [
         # proyecto
-        'https://github.com/jobiols/cl-test.git -b 13.0e',
-        'https://github.com/jobiols/jeo-enterprise.git',
+        'git@github.com:jobiols/cl-test.git -b 13.0e',
+        'git@github.com:jobiols/jeo-enterprise.git',
         'https://github.com/ingadhoc/sale.git'
 
         # contiene standard depends
