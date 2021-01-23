@@ -42,7 +42,7 @@
 
     # Here begins odoo-env manifest configuration
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    
+
     # manifest version, if omitted it is backward compatible
     'env-ver': '2',
 
@@ -57,6 +57,9 @@
         # proyecto
         'git@github.com:jobiols/cl-test.git -b 13.0e',
         'git@github.com:jobiols/jeo-enterprise.git',
+        'git@github.com:jobiols/odoo-etl.git',
+        'git@github.com:jobiols/odoo-jeo-ce.git',
+
         'https://github.com/ingadhoc/sale.git',
 
         # contiene standard depends
@@ -71,7 +74,7 @@
         'https://github.com/ingadhoc/argentina-sale',
         'https://github.com/ingadhoc/account-payment',
         'https://github.com/ingadhoc/stock',
-        
+
         # oca para localizacion
         'https://github.com/oca/web',
 
