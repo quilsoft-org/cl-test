@@ -33,12 +33,31 @@
     'installable': True,
     'application': True,
 
-    'CPUs': '1',
-    'limit_request': '8196',
-    'limit_memory_soft': '640000000',
-    'limit_memory_hard': '760000000',
-    'limit_time_cpu': '6000',
-    'limit_time_real': '12000',
+    'config': [
+
+        # 'addons_path' is always computed looking for the repositories in sources
+        # 'data_dir' is a fixed location inside docker odoo image
+
+        # You should use 2 worker threads + 1 cron thread per available CPU,
+        # and 1 CPU per 10 concurent users.
+        # if ommited oe will calculate workers and cron´s based on # of cpu
+                'workers = 5',
+                'max_cron_threads = 1',
+
+        # Number of requests a worker will process before being recycled and
+        # restarted. Defaults to 8192 if ommited
+                'limit_request = 8192',
+
+        # Maximum allowed virtual memory per worker. If the limit is exceeded,
+        # the worker is killed and recycled at the end of the current request.
+        # Defaults to 640MB
+                'limit_memory_soft = 2147483648',
+
+        # Hard limit on virtual memory, any worker exceeding the limit will be
+        # immediately killed without waiting for the end of the current request
+        # processing. Defaults to 768MB.
+                'limit_memory_hard = 2684354560',
+    ],
 
     # Here begins odoo-env manifest configuration
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
