@@ -43,7 +43,12 @@
     'port': '8069',
 
     'git-repos': [
-        'git@github.com:jobiols/cl-test.git',
+        'git@github.com:jobiols/cl-test.git -b 13.0.QR',
+        # probando QR de Filoquin
+        #'https://github.com/ingadhoc/odoo-argentina-ce ingadhoc-odoo-argentina-ce',
+        'https://github.com/filoquin/odoo-argentina-ce -b 13.0_qr',
+
+
         'git@github.com:jobiols/odoo-custom',
         'git@github.com:jobiols/odoo-private-addons.git',
         'git@github.com:jobiols/odoo-jeo-ce.git',
@@ -150,7 +155,8 @@
         'https://github.com/ingadhoc/argentina-reporting ingadhoc-argentina-reporting',
         'https://github.com/ingadhoc/partner ingadhoc-partner',
         'https://github.com/ingadhoc/reporting-engine ingadhoc-reporting-engine',
-        'https://github.com/ingadhoc/odoo-argentina-ce ingadhoc-odoo-argentina-ce',
+
+
         'https://github.com/ingadhoc/manufacture ingadhoc-manufacture',
         'https://github.com/ingadhoc/multi-store ingadhoc-multi-store',
         'https://github.com/ingadhoc/hr ingadhoc-hr',
