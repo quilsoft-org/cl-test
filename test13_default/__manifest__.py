@@ -51,7 +51,11 @@
         # OCA
         'https://github.com/OCA/server-tools oca-server-tools',
         'https://github.com/OCA/stock-logistics-workflow oca-stock-logistics-workflow',
-        'https://github.com/OCA/sale-workflow oca-sale-workflow',
+
+        # fixing sale-workflow/sale_order_type
+
+        'https://github.com/jobiols/sale-workflow oca-sale-workflow',
+        #'https://github.com/OCA/sale-workflow oca-sale-workflow',
         'https://github.com/OCA/field-service oca-field-service',
         'https://github.com/OCA/hr oca-hr',
         'https://github.com/OCA/social oca-social',
