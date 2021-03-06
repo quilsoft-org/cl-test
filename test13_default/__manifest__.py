@@ -78,6 +78,7 @@
         'git@github.com:jobiols/odoo-custom',
         'git@github.com:jobiols/odoo-private-addons.git',
         'git@github.com:jobiols/odoo-jeo-ce.git',
+        'git@github.com:unoobi/localizacion-argentina.git'
 
         # OCA
         'https://github.com/OCA/server-tools oca-server-tools',
