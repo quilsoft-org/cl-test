@@ -44,14 +44,17 @@
 
     'git-repos': [
         'git@github.com:jobiols/cl-test.git',
-        'git@github.com:jobiols/odoo-custom',
-        'git@github.com:jobiols/odoo-private-addons.git',
-        'git@github.com:jobiols/odoo-jeo-ce.git',
-        
-        'https://github.com/ctmil/odoo-argentina.git ctmil/ctmil-odoo-argentina',
-        'https://github.com/ctmil/account-financial-tools ctmil/ctmil-account-financial-tools',
+		
+		# JEO 				# ===========================================================================
+        'git@github.com:jobiols/odoo-custom jeo-odoo-custom',
+        'git@github.com:jobiols/odoo-private-addons jeo-odoo-private-addons',
+        'git@github.com:jobiols/odoo-jeo-ce jeo-odoo-jeo-ce',
 
-        # OCA
+		# Moldeo			# ===========================================================================
+#        'https://github.com/ctmil/odoo-argentina.git ctmil/ctmil-odoo-argentina',
+#        'https://github.com/ctmil/account-financial-tools ctmil/ctmil-account-financial-tools',
+
+        # OCA				# ===========================================================================
         'https://github.com/OCA/l10n-spain.git oca-l10n-spain',
         'https://github.com/OCA/server-tools oca-server-tools',
         'https://github.com/OCA/stock-logistics-workflow oca-stock-logistics-workflow',
@@ -137,7 +140,7 @@
         'https://github.com/OCA/stock-logistics-reporting oca-stock-logistics-reporting',
         'https://github.com/OCA/l10n-spain oca-l10n-spain',
 
-        # ingadhoc
+        # ADHOC				# ===========================================================================
         'https://github.com/ingadhoc/product ingadhoc-product',
         'https://github.com/ingadhoc/odoo-argentina ingadhoc-odoo-argentina',
         'https://github.com/ingadhoc/miscellaneous ingadhoc-miscellaneous',
@@ -159,11 +162,10 @@
         'https://github.com/ingadhoc/manufacture ingadhoc-manufacture',
         'https://github.com/ingadhoc/multi-store ingadhoc-multi-store',
         'https://github.com/ingadhoc/hr ingadhoc-hr',
-        'https://github.com/ingadhoc/odoo-legal ingadhoc-odoo-legal',
         'https://github.com/ingadhoc/account-analytic ingadhoc-account-analytic',
         'https://github.com/ingadhoc/project ingadhoc-project',
 
-        # Odoomates
+        # Odoomates			# ===========================================================================
         'https://github.com/odoomates/odooapps odoomates-odooapps',
 		
 		# OpenWorx			# ===========================================================================
