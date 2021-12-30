@@ -150,6 +150,7 @@
         # 'https://github.com/quilsoft-org/partner quilsoft-org-partner',
         # 'https://github.com/quilsoft-org/reporting-engine quilsoft-org-reporting-engine',
         'https://github.com/quilsoft-org/odoo-argentina-ee quilsoft-org-odoo-argentina-ee',
+        'https://github.com/quilsoft-org/odoo-argentina-ce quilsoft-org-odoo-argentina-ce',
         # 'https://github.com/quilsoft-org/manufacture quilsoft-org-manufacture',
         # 'https://github.com/quilsoft-org/multi-store quilsoft-org-multi-store',
         # 'https://github.com/quilsoft-org/hr quilsoft-org-hr',
