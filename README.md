@@ -1,3 +1,3 @@
-# cl-test v15
+# cl-test v15e
 
-Modulo de test para la version 15
+Modulo de test para la version 15 EE

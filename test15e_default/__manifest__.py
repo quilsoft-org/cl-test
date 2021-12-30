@@ -19,7 +19,7 @@
 ##############################################################################
 
 {
-    'name': 'test15',
+    'name': 'test15e',
     'version': '15.0.1.0.0',
     'category': 'Tools',
     'summary': "Test for v15 CE",
@@ -27,7 +27,7 @@
     'website': 'http://github.com/jobiols/cl-test',
     'license': 'AGPL-3',
     'depends': [
-        'standard_depends_ce'
+        'standard_depends_ee'
         ],
     'installable': True,
 
@@ -35,7 +35,7 @@
     'env-ver': '2',
 
     # if Enterprise it installs in a different directory than community
-    'odoo-license': 'CE',
+    'odoo-license': 'EE',
 
     # Config to write in odoo.conf
     'config': [],
@@ -43,8 +43,8 @@
     'port': '8069',
 
     'git-repos': [
-        'git@github.com:jobiols/cl-test.git',
-        'git@github.com:jobiols/odoo-jeo-ce.git',
+        'git@github.com:jobiols/cl-test.git 15.0e',
+
 
         # OCA
         # 'https://github.com/OCA/l10n-spain.git oca-l10n-spain',
@@ -134,23 +134,23 @@
 
         # # ingadhoc
         # 'https://github.com/ingadhoc/product ingadhoc-product',
-        # 'https://github.com/ingadhoc/odoo-argentina ingadhoc-odoo-argentina',
+        'https://github.com/ingadhoc/odoo-argentina ingadhoc-odoo-argentina',
         # 'https://github.com/ingadhoc/miscellaneous ingadhoc-miscellaneous',
         # 'https://github.com/ingadhoc/sale ingadhoc-sale',
         # 'https://github.com/ingadhoc/purchase ingadhoc-purchase',
-        # 'https://github.com/ingadhoc/account-financial-tools ingadhoc-account-financial-tools',
+        'https://github.com/ingadhoc/account-financial-tools ingadhoc-account-financial-tools',
         # 'https://github.com/ingadhoc/website ingadhoc-website',
-        # 'https://github.com/ingadhoc/account-invoicing ingadhoc-account-invoicing',
+        'https://github.com/ingadhoc/account-invoicing ingadhoc-account-invoicing',
         # 'https://github.com/ingadhoc/aeroo_reports ingadhoc-aeroo_reports',
         # 'https://github.com/ingadhoc/odoo-public-administration ingadhoc-odoo-public-administration',
-        # 'https://github.com/ingadhoc/account-payment ingadhoc-account-payment',
+        'https://github.com/ingadhoc/account-payment ingadhoc-account-payment',
         # 'https://github.com/ingadhoc/multi-company ingadhoc-multi-company',
         # 'https://github.com/ingadhoc/argentina-sale ingadhoc-argentina-sale',
         # 'https://github.com/ingadhoc/stock ingadhoc-stock',
         # 'https://github.com/ingadhoc/argentina-reporting ingadhoc-argentina-reporting',
         # 'https://github.com/ingadhoc/partner ingadhoc-partner',
         # 'https://github.com/ingadhoc/reporting-engine ingadhoc-reporting-engine',
-        # 'https://github.com/ingadhoc/odoo-argentina-ce ingadhoc-odoo-argentina-ce',
+        'https://github.com/ingadhoc/odoo-argentina-ee ingadhoc-odoo-argentina-ee',
         # 'https://github.com/ingadhoc/manufacture ingadhoc-manufacture',
         # 'https://github.com/ingadhoc/multi-store ingadhoc-multi-store',
         # 'https://github.com/ingadhoc/hr ingadhoc-hr',
@@ -167,7 +167,7 @@
 
     # list of images to use in the form 'name image-url'
     'docker-images': [
-        'odoo jobiols/odoo-jeo:15.0',
+        'odoo jobiols/odoo-ent:15.0e',
         'postgres postgres:10.1-alpine',
     ]
 }
