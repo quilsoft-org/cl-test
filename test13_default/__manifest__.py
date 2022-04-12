@@ -43,12 +43,12 @@
     'port': '8069',
 
     'git-repos': [
-        'git@github.com:jobiols/cl-test.git',
+        'https://github.com/jobiols/cl-test.git',
 		
 		# JEO 				# ===========================================================================
-        'git@github.com:jobiols/odoo-custom jeo-odoo-custom',
-        'git@github.com:jobiols/odoo-private-addons jeo-odoo-private-addons',
-        'git@github.com:jobiols/odoo-jeo-ce jeo-odoo-jeo-ce',
+        'https://github.com/jobiols/odoo-custom jeo-odoo-custom',
+        'https://github.com/jobiols/odoo-private-addons jeo-odoo-private-addons',
+        'https://github.com/jobiols/odoo-jeo-ce jeo-odoo-jeo-ce',
 
 		# Moldeo			# ===========================================================================
 #        'https://github.com/ctmil/odoo-argentina.git ctmil/ctmil-odoo-argentina',
