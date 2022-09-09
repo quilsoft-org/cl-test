@@ -45,13 +45,12 @@
     'git-repos': [
         'git@github.com:jobiols/cl-test.git -b 15.0e',
 
-        # # quilsoft-org
-        'https://github.com/quilsoft-org/odoo-argentina quilsoft-org-odoo-argentina',
-        'https://github.com/quilsoft-org/account-financial-tools quilsoft-org-account-financial-tools',
-        'https://github.com/quilsoft-org/account-invoicing quilsoft-org-account-invoicing',
-        'https://github.com/quilsoft-org/account-payment quilsoft-org-account-payment',
-        'https://github.com/quilsoft-org/odoo-argentina-ee quilsoft-org-odoo-argentina-ee',
-        'https://github.com/quilsoft-org/odoo-argentina-ce quilsoft-org-odoo-argentina-ce',
+        # # ingadhoc
+        'https://github.com/ingadhoc/odoo-argentina ingadhoc-odoo-argentina',
+        'https://github.com/ingadhoc/account-financial-tools ingadhoc-account-financial-tools',
+        'https://github.com/ingadhoc/account-invoicing ingadhoc-account-invoicing',
+        'https://github.com/ingadhoc/account-payment ingadhoc-account-payment',
+        'https://github.com/ingadhoc/odoo-argentina-ee ingadhoc-odoo-argentina-ee',
     ],
 
     # list of images to use in the form 'name image-url'
