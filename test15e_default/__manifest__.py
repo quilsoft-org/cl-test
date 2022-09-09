@@ -57,5 +57,6 @@
     'docker-images': [
         'odoo jobiols/odoo-ent:15.0e',
         'postgres postgres:10.1-alpine',
+        'nginx nginx',
     ]
 }
