@@ -43,7 +43,7 @@
     'port': '8069',
 
     'git-repos': [
-        'git@github.com:jobiols/cl-test.git -b 15.0e',
+        'https://github.com/jobiols/cl-test.git -b 15.0e',
 
         # # ingadhoc
         'https://github.com/ingadhoc/odoo-argentina ingadhoc-odoo-argentina',
