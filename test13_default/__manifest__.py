@@ -50,9 +50,8 @@
         'https://github.com/jobiols/odoo-private-addons jeo-odoo-private-addons',
         'https://github.com/jobiols/odoo-jeo-ce jeo-odoo-jeo-ce',
 
-		# Moldeo			# ===========================================================================
-#        'https://github.com/ctmil/odoo-argentina.git ctmil/ctmil-odoo-argentina',
-#        'https://github.com/ctmil/account-financial-tools ctmil/ctmil-account-financial-tools',
+	# Moldeo			# ===========================================================================
+	'https://github.com/ctmil/payment_mercadopago ctmil/payment_mercadopago',
 
         # OCA				# ===========================================================================
         'https://github.com/OCA/l10n-spain.git oca-l10n-spain',
