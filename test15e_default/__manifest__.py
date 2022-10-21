@@ -27,7 +27,17 @@
     'website': 'http://github.com/jobiols/cl-test',
     'license': 'AGPL-3',
     'depends': [
-        'l10n_ar_ux'
+        'l10n_ar_ux', # l10n_ar, l10n_latam_check, account_withholding, account_payment_group
+        'l10n_ar_edi', # wsfev1 - "Factura Electrónica"
+                       # wsbfev1 - "Bono Fiscal Electrónico"
+                       # wsfexv1 - "Factura de Exportación Electrónica"
+                       # wscdc - "Constatación de Comprobantes"
+        'l10n_ar_edi_ux', # bajada de padron
+        'l10n_ar_purchase_stock', # l10n_ar_purchase
+	    'l10n_ar_account_tax_settlement', # seteo de impuestos para argentina
+        'l10n_ar_bank',
+        'l10n_ar_account_withholding',
+
         ],
     'installable': True,
 
@@ -57,6 +67,5 @@
     'docker-images': [
         'odoo jobiols/odoo-ent:15.0e',
         'postgres postgres:10.1-alpine',
-        'nginx nginx',
     ]
 }
