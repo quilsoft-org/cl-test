@@ -63,7 +63,7 @@
         'git@github.com:ingadhoc/account-invoicing.git',
         'git@github.com:ingadhoc/account-payment.git',
         'git@github.com:ingadhoc/miscellaneous.git',
-
+        'git@github.com:oca/partner-contact.git',
     ],
 
     # Docker images to be used in this deployment
