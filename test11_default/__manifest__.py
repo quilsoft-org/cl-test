@@ -62,6 +62,8 @@
         'git@github.com:ingadhoc/account-financial-tools.git',
         'git@github.com:ingadhoc/account-invoicing.git',
         'git@github.com:ingadhoc/account-payment.git',
+        'git@github.com:ingadhoc/miscellaneous.git',
+
     ],
 
     # Docker images to be used in this deployment
