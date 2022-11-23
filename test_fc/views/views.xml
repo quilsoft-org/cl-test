@@ -1,0 +1,109 @@
+<odoo>
+  <data>
+
+    <record id="pruebafc_res_partner_form" model="ir.ui.view">
+    <field name="name">pruebafc.res.partner.form</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form"/>
+    <field name="arch" type="xml">
+      <field name="industry_id" position="after">
+          <field name="es_frecuente" />
+          <field name="puntuacion" attrs="{'invisible':[('es_frecuente', '!=', True)]}" />
+      </field>
+    </field>
+  </record>
+
+ <record id="verificar_cantidad_presupuestos" model="ir.cron">
+       <field name="name">Verificar cantidad de Presupuestos</field>
+       <field name="model_id" ref="model_verificar_presupuestos"/>
+       <field name="state">code</field>
+       <field name="code">model.verificar_cantidad()</field>
+       <field name="user_id" ref="base.user_root"/>
+       <field name='interval_number'>1</field>
+       <field name='interval_type'>days</field>
+       <field name="numbercall">-1</field>
+       <field name="nextcall" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 13:00:00')" />
+       <field name="doall" eval="False"/>
+   </record>
+
+    <!-- explicit list view definition -->
+    
+    <record id="lagartijas_action" model="ir.actions.act_window">
+      <field name="name">Lagartijas</field>
+      <field name="res_model">lagartijas</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_lagartijas" model="ir.ui.view">
+         <field name="name">lagartijas.tree</field>
+         <field name="model">lagartijas</field>
+         <field name="arch" type="xml">
+            <tree>
+    <field name="apodo" />
+    <field name="peso" />
+    <field name="alta" />
+    <field name="write_uid" optional="hide"/>
+            </tree>
+         </field>
+    </record>
+
+    <menuitem name="Lagartijas" id="menu_lagartijas"
+    action="lagartijas_action"
+                parent="sale.menu_sale_general_settings"
+                sequence="70"/>
+
+    <!-- <record model="ir.ui.view" id="res_config_settings_view_form">
+    <field name="name">res.config.settings.view.form.inherit.l10n_ar_afip_ws</field>
+    <field name="model">res.config.settings</field>
+    <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+    <field name="arch" type="xml">
+      <field name="argentina_localization" position="inside">
+          <field name="numero_presupuestos" />
+      </field>
+    </field>
+  </record> -->
+    
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="my_module.action_window">
+      <field name="name">my_module window</field>
+      <field name="res_model">my_module.my_module</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="my_module.action_server">
+      <field name="name">my_module server</field>
+      <field name="model_id" ref="model_my_module_my_module"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="my_module" id="my_module.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="my_module.menu_1" parent="my_module.menu_root"/>
+    <menuitem name="Menu 2" id="my_module.menu_2" parent="my_module.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="my_module.menu_1_list" parent="my_module.menu_1"
+              action="my_module.action_window"/>
+    <menuitem name="Server to list" id="my_module" parent="my_module.menu_2"
+              action="my_module.action_server"/>
+    -->
+  </data>
+</odoo>

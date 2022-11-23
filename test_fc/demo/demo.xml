@@ -1,0 +1,6 @@
+<odoo noupdate="1">
+        <record id="default_quotation_no" model="ir.config_parameter">
+        <field name="key">quotation.no</field>
+        <field name="value">0</field>
+        </record>
+</odoo>
