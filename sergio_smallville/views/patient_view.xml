@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<odoo>
+	<data>  
+
+		<record id="patient_tree_view" model="ir.ui.view">
+			<field name="name">Patients Tree</field>
+			<field name="model">patients</field>
+			<field name="arch" type="xml">
+				<tree string="Patients" create="true">
+					<field name="sequence"/>
+					<field name="name"/>
+					<field name="dni"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="patient_form_view" model="ir.ui.view">
+			<field name="name">Patients Form</field>
+			<field name="model">patients</field>
+			<field name="arch" type="xml">
+				<form string="Patients">
+					<header>
+						<field name="state" widget="statusbar" clickable="True"/>
+					</header>					
+					<sheet>
+						<div class="oe_left" style="width: 500px;">
+							<div class="oe_title" style="width: 390px;">
+								<h1><field name="sequence" class="oe_inline"/></h1> <!-- attrs="{'readonly':[('state','in','confirmed')]}" -->
+							</div>
+						</div>
+						<group>
+							<group>
+								<field name="name"/>
+								<field name="dni"/>
+							</group>
+							<group>							
+								<field name="treatment_ids"
+									options="{
+										'no_create_edit': True,
+										'no_create': True, 
+										'no_quick_create': True}" 
+									context="{
+										'tree_view_ref' : 
+										'vertical_hospital.treatment_tree_field'}"/>
+							</group>
+							<group>
+								<field name="discharge_date"/>
+								<field name="update_date"/>
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="activity_ids" widget="mail_activity"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>					
+				</form>
+			</field>
+		</record>
+		
+        <!-- <record id="patient_search_view" model="ir.ui.view">
+            <field name="name">Patients Search</field>
+            <field name="model">patients</field>
+            <field name="arch" type="xml">
+                <search string="Patients">
+                </search>
+            </field>
+        </record> -->
+
+		<record id="action_patient" model="ir.actions.act_window">
+			<field name="name">Patients</field>
+			<field name="res_model">patients</field>
+			<field name="view_type">form</field>
+			<!-- <field name="search_view_id" ref="patient_search_view"/> -->
+			<field name="view_id" ref="patient_tree_view"/>
+			<field name="help" type="html">
+				<div>
+					<br/><br/><br/>
+					<p>
+					<b>Create information of Patients.</b>
+					</p>
+				</div>
+			</field>
+		</record>
+
+		<menuitem id="menu_patients" name="Patients"
+			parent="vertical_hospital.hospital_main_menu" sequence="1"
+			action="vertical_hospital.action_patient"/>
+   	
+  </data>
+</odoo>

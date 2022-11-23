@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <report
+    id="patients_report"
+    string="Report"
+    model="patients"
+    report_type="qweb-pdf"
+    name="vertical_hospital.template_patient"
+    file="vertical_hospital.template_patient"
+    attachment_use="False"
+    attachment="'Report {}'.format(object.name)"
+  />
+
+  <template id="template_patient">
+    <t t-call="web.html_container">
+      <t t-foreach="docs" t-as="o">
+        <t t-call="web.external_layout">
+          <div class="page" style="font-size: 12px">
+            <div align="center">
+                <div>
+                    <h4><span><strong>REPORTE PACIENTES</strong></span></h4>
+                </div>
+            </div>
+            <br/>
+            <table border="0" cellpadding="0" cellspacing="0" style="width:100%; margin:0;">
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid; text-align: center;">Secuencia</th>
+                        <th style="border: 1px solid; text-align: center;">Nombre Apellido</th>
+                        <th style="border: 1px solid; text-align: center;">DNI</th>
+                        <th style="border: 1px solid; text-align: center;">Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="docs" t-as="data">
+                        <td style="border: 1px solid; text-align: center;"><span t-field="data.sequence"/></td>
+                        <td style="border: 1px solid; text-align: center;"><span t-field="data.name"/></td>
+                        <td style="border: 1px solid; text-align: center;"><span t-field="data.dni"/></td>
+                        <td style="border: 1px solid; text-align: center;"><span t-field="data.state"/></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            <p style="text-align:center"> *** END OF DOCUMENT ***</p>   
+          </div>
+        </t>
+      </t>
+    </t>
+  </template>
+</odoo>
