@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    'name': 'test13',
-    'version': '13.0.1.0.0',
+    'name': 'test131',
+    'version': '13.1.1.0.0',
     'category': 'Tools',
     'summary': "Test for v13 CE",
     'author': "jeo Software",
@@ -43,17 +43,11 @@
 
     'git-repos': [
         'git@github.com:jobiols/cl-test.git',
-        'git@github.com:siseservicios/sise_addons.git',
-        'git@github.com:ingadhoc/odoo-argentina.git',
-        'git@github.com:ingadhoc/account-financial-tools.git',
-        'git@github.com:ingadhoc/account-invoicing.git',
-        'git@github.com:ingadhoc/account-payment.git',
-        'git@github.com:OCA/partner-contact.git'
     ],
 
     # list of images to use in the form 'name image-url'
     'docker-images': [
-        'odoo jobiols/odoo-jeo:13.0',
+        'odoo jobiols/odoo-jeo:13.1',
         'postgres postgres:10.1-alpine',
     ]
 }
