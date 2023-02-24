@@ -19,10 +19,10 @@
 ##############################################################################
 
 {
-    "name": "test16",
+    "name": "test16e",
     "version": "16.0.1.0.0",
     "category": "Tools",
-    "summary": "Test for v16 CE",
+    "summary": "Test for v16 EE",
     "author": "jeo Software",
     "website": "http://github.com/jobiols/cl-test",
     "license": "AGPL-3",
@@ -31,7 +31,7 @@
     # manifest version, if omitted it is backward compatible
     "env-ver": "2",
     # if Enterprise it installs in a different directory than community
-    "odoo-license": "CE",
+    "odoo-license": "EE",
     # Config to write in odoo.conf
     "config": [
         "workers = 0",
@@ -40,11 +40,15 @@
     "port": "8069",
     "git-repos": [
         "https://github.com/jobiols/cl-test.git",
-        #'git@github.com:jobiols/odoo-jeo-ce.git',
+        'git@github.com:ingadhoc/odoo-argentina.git',
+        'git@github.com:ingadhoc/account-financial-tools.git',
+        'git@github.com:ingadhoc/account-invoicing.git',
+        'git@github.com:ingadhoc/account-payment.git',
+        'git@github.com:ingadhoc/odoo-argentina-ee.git',
     ],
     # list of images to use in the form 'name image-url'
     "docker-images": [
-        "odoo jobiols/odoo-jeo:16.0",
+        "odoo jobiols/odoo-ent:16.0e",
         "postgres postgres:15.1-alpine",
     ],
 }
