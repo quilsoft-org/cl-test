@@ -43,12 +43,10 @@
 
     'git-repos': [
         'git@github.com:jobiols/cl-test.git',
-        'git@github.com:siseservicios/sise_addons.git',
         'git@github.com:ingadhoc/odoo-argentina.git',
         'git@github.com:ingadhoc/account-financial-tools.git',
         'git@github.com:ingadhoc/account-invoicing.git',
         'git@github.com:ingadhoc/account-payment.git',
-        'git@github.com:OCA/partner-contact.git'
     ],
 
     # list of images to use in the form 'name image-url'
