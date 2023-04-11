@@ -39,7 +39,7 @@
 
     'git-repos': [
         'git@github.com:jobiols/cl-test.git',
-        'https://github.com/betovone/vertical_hospital.git',
+        'https://github.com/betovone/vertical_hospital.git -b main',
 
         #'https://github.com/oca/contract.git',
 #        'https://github.com/jobiols/odoo-addons.git',
