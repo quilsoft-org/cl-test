@@ -38,7 +38,7 @@
     'port': '8069',
 
     'git-repos': [
-        'https://github.com/jobiols/cl-test.git',
+        'hgit@github.com:jobiols/cl-test.git',
         'https://github.com/betovone/vertical_hospital.git',
         
         #'https://github.com/oca/contract.git',
