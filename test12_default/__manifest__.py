@@ -50,6 +50,7 @@
     # list of url repos to install in the form 'repo-url directory'
     'git-repos': [
         'git@github.com:jobiols/cl-test.git',
+        'https://github.com/FelipeCarlini/carga_vehiculos.git'
     ],
 
     # list of images to use in the form 'name image-url'
