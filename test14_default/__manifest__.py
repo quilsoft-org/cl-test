@@ -48,9 +48,11 @@
 
         # para localizacion argentina
         'https://github.com/quilsoft-org/odoo-argentina.git',
-        'https://github.com/quilsoft-org/odoo-argentina-ce.git',
+        'https://github.com/quilsoft-org/odoo-argentina-ee.git',
         'https://github.com/quilsoft-org/account-payment.git',
         'https://github.com/quilsoft-org/account-financial-tools.git',
+        #'https://github.com/quilsoft-org/argentina-sale.git',
+
     ],
 
     # list of images to use in the form 'name image-url'
