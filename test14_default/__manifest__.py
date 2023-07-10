@@ -41,10 +41,10 @@
         'git@github.com:jobiols/cl-test.git -b 14.0e',
 
         # para localizacion argentina
-        'https://github.com/ingadhoc/odoo-argentina.git',
-        'https://github.com/ingadhoc/odoo-argentina-ce.git',
-        'https://github.com/ingadhoc/account-payment.git',
-        'https://github.com/ingadhoc/account-financial-tools.git',
+        'https://github.com/quilsoft-org/odoo-argentina.git',
+        'https://github.com/quilsoft-org/odoo-argentina-ce.git',
+        'https://github.com/quilsoft-org/account-payment.git',
+        'https://github.com/quilsoft-org/account-financial-tools.git',
     ],
 
     # list of images to use in the form 'name image-url'
