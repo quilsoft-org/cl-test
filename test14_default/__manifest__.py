@@ -19,10 +19,10 @@
 ##############################################################################
 
 {
-    'name': 'test14',
-    'version': '14.0.0.0.0',
+    'name': 'test14e',
+    'version': '14.0.1.0.0',
     'category': 'Tools',
-    'summary': "Test for v14 CE",
+    'summary': "Test for v14 EE",
     'author': "jeo Software",
     'website': 'http://github.com/jobiols/module-repo',
     'license': 'AGPL-3',
@@ -33,27 +33,23 @@
     'env-ver': '2',
 
     # if Enterprise it installs in a different directory than community
-    'odoo-license': 'CE',
+    'odoo-license': 'EE',
 
     'port': '8069',
 
     'git-repos': [
-        'git@github.com:jobiols/cl-test.git',
-        'https://github.com/betovone/vertical_hospital.git -b main',
-
-        #'https://github.com/oca/contract.git',
-#        'https://github.com/jobiols/odoo-addons.git',
+        'git@github.com:jobiols/cl-test.git -b 14.0e',
 
         # para localizacion argentina
-        #'https://github.com/ingadhoc/odoo-argentina.git',
-        #'https://github.com/ingadhoc/odoo-argentina-ce.git',
-        #'https://github.com/ingadhoc/account-payment.git',
-        #'https://github.com/ingadhoc/account-financial-tools.git',
+        'https://github.com/ingadhoc/odoo-argentina.git',
+        'https://github.com/ingadhoc/odoo-argentina-ce.git',
+        'https://github.com/ingadhoc/account-payment.git',
+        'https://github.com/ingadhoc/account-financial-tools.git',
     ],
 
     # list of images to use in the form 'name image-url'
     'docker-images': [
-        'odoo jobiols/odoo-jeo:14.0',
+        'odoo jobiols/odoo-ent:14.0e',
         'postgres postgres:10.1-alpine',
     ]
 }
