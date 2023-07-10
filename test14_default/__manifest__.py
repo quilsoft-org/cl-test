@@ -26,7 +26,7 @@
     'author': "jeo Software",
     'website': 'http://github.com/jobiols/module-repo',
     'license': 'AGPL-3',
-    'depends': [ ],
+    'depends': ['l10n_ar'],
     'installable': True,
 
     # manifest version, if omitted it is backward compatible
@@ -34,7 +34,13 @@
 
     # if Enterprise it installs in a different directory than community
     'odoo-license': 'EE',
-
+    "config": [
+        "workers = 0",
+        "max_cron_threads = 0",
+        "limit_time_cpu = 0",
+        "limit_time_real = 0",
+        "admin_passwd = admin"
+    ],
     'port': '8069',
 
     'git-repos': [
