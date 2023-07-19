@@ -39,7 +39,7 @@
     ],
     "port": "8069",
     "git-repos": [
-        "https://github.com/jobiols/cl-test.git",
+        "https://github.com/jobiols/cl-test.git -b 16.0e",
         'git@github.com:ingadhoc/odoo-argentina.git',
         'git@github.com:ingadhoc/account-financial-tools.git',
         'git@github.com:ingadhoc/account-invoicing.git',
