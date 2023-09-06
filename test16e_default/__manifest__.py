@@ -19,10 +19,10 @@
 ##############################################################################
 
 {
-    "name": "test17e",
-    "version": "17.0.1.0.0",
+    "name": "test16e",
+    "version": "16.0.1.0.0",
     "category": "Tools",
-    "summary": "Test for v17 EE",
+    "summary": "Test for v16 EE",
     "author": "jeo Software",
     "website": "http://github.com/jobiols/cl-test",
     "license": "AGPL-3",
@@ -39,7 +39,7 @@
     ],
     "port": "8069",
     "git-repos": [
-        "https://github.com/jobiols/cl-test.git -b 17.0e",
+        "https://github.com/jobiols/cl-test.git -b 16.0e",
 
         'git@github.com:ingadhoc/odoo-argentina.git',
         'git@github.com:ingadhoc/account-financial-tools.git',
@@ -50,7 +50,7 @@
     ],
     # list of images to use in the form 'name image-url'
     "docker-images": [
-        "odoo jobiols/odoo-ent:17.0e",
+        "odoo jobiols/odoo-ent:16.0e",
         "postgres postgres:15.1-alpine",
     ],
 }
