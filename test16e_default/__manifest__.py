@@ -40,6 +40,8 @@
     "port": "8069",
     "git-repos": [
         "https://github.com/jobiols/cl-test.git -b 16.0e",
+        'git@github.com:quilsoft-org/danone_v16.git -b main',
+       
         'git@github.com:ingadhoc/odoo-argentina.git',
         'git@github.com:ingadhoc/account-financial-tools.git',
         'git@github.com:ingadhoc/account-invoicing.git',
