@@ -19,10 +19,10 @@
 ##############################################################################
 
 {
-    "name": "test16e",
-    "version": "16.0.1.0.0",
+    "name": "test17e",
+    "version": "17.0.1.0.0",
     "category": "Tools",
-    "summary": "Test for v16 EE",
+    "summary": "Test for v17 EE",
     "author": "jeo Software",
     "website": "http://github.com/jobiols/cl-test",
     "license": "AGPL-3",
@@ -49,13 +49,13 @@
     ],
     # list of images to use in the form 'name image-url'
     "docker-images": [
-        "odoo jobiols/odoo-ent:16.0e",
+        "odoo jobiols/odoo-ent:17.0e",
         "postgres postgres:15.1-alpine",
     ],
 
     # list of images to use in the form 'name image-url'
     "docker-images": [
-        "odoo jobiols/odoo-ent:16.0e",
+        "odoo jobiols/odoo-ent:17.0e",
         "postgres postgres:15.1-alpine",
     ],
 }
