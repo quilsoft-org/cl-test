@@ -62,6 +62,14 @@
         'https://github.com/ingadhoc/account-payment ingadhoc-account-payment',
         'https://github.com/ingadhoc/odoo-argentina-ee ingadhoc-odoo-argentina-ee',
 
+        'https://github.com/ingadhoc/partner ingadhoc-partner',
+
+        'https://github.com/OCA/brand oca-brand',
+        'https://github.com/OCA/partner-contact oca-partner-contact',
+        'https://github.com/OCA/server-ux oca-server-ux',
+        'https://github.com/OCA/server-tools oca-server-tools',
+        'https://github.com/OCA/web oca-web',
+
 	'https://github.com/OCA/commission.git oca-commission',        
     ],
 
