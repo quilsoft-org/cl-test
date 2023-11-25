@@ -29,7 +29,6 @@
     'license': 'AGPL-3',
     'depends': [
         # basic applications
-        'standard_depends_ce',
     ],
     'data': [
     ],
@@ -57,7 +56,6 @@
     # syntax: the same as git clone
     'git-repos': [
         'git@github.com:jobiols/cl-test.git',
-        'git@github.com:siseservicios/sise_addons.git',
         'git@github.com:ingadhoc/odoo-argentina.git',
         'git@github.com:ingadhoc/account-financial-tools.git',
         'git@github.com:ingadhoc/account-invoicing.git',
