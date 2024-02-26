@@ -39,8 +39,7 @@
     ],
     "port": "8069",
     "git-repos": [
-        "https://github.com/jobiols/cl-test.git",
-        #'git@github.com:jobiols/odoo-jeo-ce.git',
+        "git@github.com:quilsoft-org/cl-test.git -b 16.0",
     ],
     # list of images to use in the form 'name image-url'
     "docker-images": [
