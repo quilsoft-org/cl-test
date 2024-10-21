@@ -1,0 +1,44 @@
+[submodule "sub_l10n-ar/account-financial-tools"]
+	path = sub_l10n-ar/account-financial-tools
+	url = https://github.com/ingadhoc/account-financial-tools.git
+	branch = 18.0
+[submodule "sub_l10n-ar/account-payment"]
+	path = sub_l10n-ar/account-payment
+	url = https://github.com/ingadhoc/account-payment.git
+	branch = 18.0
+[submodule "sub_l10n-ar/odoo-argentina"]
+	path = sub_l10n-ar/odoo-argentina
+	url = https://github.com/ingadhoc/odoo-argentina.git
+	branch = 18.0
+[submodule "sub_l10n-ar/argentina-sale"]
+	path = sub_l10n-ar/argentina-sale
+	url = https://github.com/ingadhoc/argentina-sale.git
+	branch = 18.0
+[submodule "sub_l10n-ar/account-invoicing"]
+	path = sub_l10n-ar/account-invoicing
+	url = https://github.com/ingadhoc/account-invoicing.git
+	branch = 18.0
+[submodule "sub_l10n-ar/odoo-argentina-ee"]
+	path = sub_l10n-ar/odoo-argentina-ee
+	url = https://github.com/ingadhoc/odoo-argentina-ee.git
+	branch = 18.0
+[submodule "sub_l10n-ar/stock"]
+	path = sub_l10n-ar/stock
+	url = https://github.com/ingadhoc/stock.git
+	branch = 18.0
+[submodule "sub_l10n-ar/aeroo_reports"]
+	path = sub_l10n-ar/aeroo_reports
+	url = https://github.com/ingadhoc/aeroo_reports.git
+	branch = 18.0
+[submodule "sub_l10n-ar/oca-server-tools"]
+	path = sub_l10n-ar/oca-server-tools
+	url = https://github.com/adhoc-cicd/oca-server-tools
+	branch = 18.0
+[submodule "sub_l10n-ar/oca-stock-logistics-workflow"]
+	path = sub_l10n-ar/oca-stock-logistics-workflow
+	url = https://github.com/adhoc-cicd/oca-stock-logistics-workflow.git
+	branch = 18.0
+[submodule "sub_l10n-ar/oca-web"]
+	path = sub_l10n-ar/oca-web
+	url = https://github.com/adhoc-cicd/oca-web.git
+	branch = 18.0
