@@ -40,6 +40,19 @@
     "port": "8069",
     "git-repos": [
         "https://github.com/jobiols/cl-test.git -b 18.0e",
+
+        "https://github.com/ingadhoc/account-financial-tools.git,"
+        "https://github.com/ingadhoc/account-payment.git,"
+        "https://github.com/ingadhoc/odoo-argentina.git,"
+        "https://github.com/ingadhoc/argentina-sale.git,"
+        "https://github.com/ingadhoc/account-invoicing.git,"
+        "https://github.com/ingadhoc/odoo-argentina-ee.git,"
+        "https://github.com/ingadhoc/stock.git,"
+        "https://github.com/ingadhoc/aeroo_reports.git,"
+
+        "https://github.com/adhoc-cicd/oca-server-tools.git,"
+        "https://github.com/adhoc-cicd/oca-stock-logistics-workflow.git,"
+        "https://github.com/adhoc-cicd/oca-web.git,"
     ],
     # list of images to use in the form 'name image-url'
     "docker-images": [
