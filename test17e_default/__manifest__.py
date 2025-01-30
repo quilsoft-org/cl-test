@@ -33,7 +33,7 @@
     # if Enterprise it installs in a different directory than community
     "odoo-license": "EE",
     # Config to write in odoo.conf
-    "config": [
+    "config_local": [
         "workers = 0",
         "admin_password = admin",
     ],
@@ -41,16 +41,23 @@
     "git-repos": [
         "https://github.com/jobiols/cl-test.git -b 17.0e",
 
-        # 'git@github.com:ingadhoc/odoo-argentina.git',
-        # 'git@github.com:ingadhoc/account-financial-tools.git',
-        # 'git@github.com:ingadhoc/account-invoicing.git',
-        # 'git@github.com:ingadhoc/account-payment.git',
-        # 'git@github.com:ingadhoc/odoo-argentina-ee.git',
-        # 'git@github.com:ingadhoc/odoo-argentina-ce.git',
+        "https://github.com/ingadhoc/account-financial-tools.git sub_l10n-ar-account-financial-tools",
+        "https://github.com/ingadhoc/account-payment.git sub_l10n-ar-account-payment",
+        "https://github.com/ingadhoc/odoo-argentina.git sub_l10n-ar-odoo-argentina",
+        "https://github.com/ingadhoc/argentina-sale.git sub_l10n-ar-argentina-sale",
+        "https://github.com/ingadhoc/account-invoicing.git sub_l10n-ar-account-invoicing",
+        "https://github.com/ingadhoc/odoo-argentina-ee.git sub_l10n-ar-odoo-argentina-ee",
+        "https://github.com/ingadhoc/stock.git sub_l10n-ar-stock",
+        "https://github.com/ingadhoc/aeroo_reports.git sub_l10n-ar-aeroo_reports",
+
+        "https://github.com/adhoc-cicd/oca-server-tools sub_l10n-ar-oca-server-tools",
+        "https://github.com/adhoc-cicd/oca-stock-logistics-workflow.git sub_l10n-ar-oca-stock-logistics-workflow",
+        "https://github.com/adhoc-cicd/oca-web.git sub_l10n-ar-oca-web",
+
     ],
     # list of images to use in the form 'name image-url'
     "docker-images": [
         "odoo jobiols/odoo-ent:17.0e",
-        "postgres postgres:15.1-alpine",
+        "postgres postgres:14.13-alpine",
     ],
 }
