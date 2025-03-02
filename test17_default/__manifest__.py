@@ -1,6 +1,6 @@
 ##############################################################################
 #
-#    Copyright (C) 2024
+#    Copyright (C) 2025
 #    All Rights Reserved.
 #
 ##############################################################################
@@ -20,7 +20,7 @@
     # if Enterprise it installs in a different directory than community
     "odoo-license": "CE",
     # Config to write in odoo.conf
-    "config": [
+    "config_local": [
         "workers = 0",
         "admin_password = admin",
     ],
@@ -32,6 +32,6 @@
     # list of images to use in the form 'name image-url'
     "docker-images": [
         "odoo jobiols/odoo-jeo:17.0",
-        "postgres postgres:15.1-alpine",
+        "postgres postgres:14.13-alpine",
     ],
 }
