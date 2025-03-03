@@ -33,8 +33,7 @@
     # if Enterprise it installs in a different directory than community
     "odoo-license": "EE",
     # Config to write in odoo.conf
-    "config_local": [
-        "workers = 0",
+    "config-local": [
         "admin_password = admin",
     ],
     "port": "8069",
