@@ -32,5 +32,5 @@ sudo docker run --rm -it \
     -v $BASE/dist-packages:/usr/lib/python3/dist-packages \
     -v $BASE/dist-local-packages:/usr/local/lib/python3.7/dist-packages \
     -e ODOO_CONF=/dev/null \
-    -e WDB_SOCKET_SERVER=wdb $IMAGE --stop-after-init -d "${CLIENT}_test" \
-    -i contacts # --test-enable
+    -e WDB_SOCKET_SERVER=wdb $IMAGE --stop-after-init -d "${CLIENT}_test"
+    #-i contacts # --test-enable
