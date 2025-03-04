@@ -11,7 +11,7 @@
 set -ex
 
 CLIENT="test17"
-IMAGE="jobiols/odoo-ent:17.0e.debug"
+IMAGE="jobiols/odoo-jeo:17.0.debug"
 DB="pg-$CLIENT:db"
 BASE=$(readlink -f "../../..")
 
