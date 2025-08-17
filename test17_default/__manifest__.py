@@ -27,6 +27,7 @@
     "port": "8069",
     "git-repos": [
         "git@github.com:quilsoft-org/cl-test.git",
+        "git@github.com:quilsoft-org/addons-private.git",
     ],
     # list of images to use in the form 'name image-url'
     "docker-images": [
