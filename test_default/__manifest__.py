@@ -6,7 +6,7 @@
 ##############################################################################
 
 {
-    "name": "test17",
+    "name": "test",
     "version": "17.0.1.0.0",
     "category": "Tools",
     "summary": "Test for v17 CE",
@@ -27,11 +27,11 @@
     "port": "8069",
     "git-repos": [
         "git@github.com:quilsoft-org/cl-test.git",
-        "git@github.com:quilsoft-org/addons-private.git",
+#        "git@github.com:quilsoft-org/addons-private.git",
     ],
     # list of images to use in the form 'name image-url'
     "docker-images": [
         "odoo jobiols/odoo-jeo:17.0",
-        "postgres postgres:17-alpine",
+        "postgres postgres:17.5-alpine",
     ],
 }
