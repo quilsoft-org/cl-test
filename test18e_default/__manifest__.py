@@ -6,6 +6,13 @@
     "author": "Quilsoft",
         "license": "AGPL-3",
     "depends": [],
+    "assets": {
+        "web.assets_backend": [
+            "test18e_default/static/src/components/example.xml",
+            "test18e_default/static/src/components/example.js",
+        ],
+    },
+
 
     "env-ver": "2",
     "odoo-license": "EE",

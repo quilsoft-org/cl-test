@@ -1,0 +1,8 @@
+<templates>
+    <t t-name="test18e_default.example" owl="1">
+        <p>Example OWL Component</p>
+        <button class="btn btn-primary"/>
+            Click me!
+        </button>
+    </t>
+</templates>
