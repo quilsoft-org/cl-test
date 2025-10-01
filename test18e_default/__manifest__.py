@@ -5,7 +5,12 @@
     "summary": "Test for v18 OWL",
     "author": "Quilsoft",
         "license": "AGPL-3",
-    "depends": [],
+    "depends": [
+        "sale",
+        ],
+    "data": [
+        "views/sale_order_views.xml",
+    ],
     "assets": {
         "web.assets_backend": [
             "test18e_default/static/src/components/example.xml",
