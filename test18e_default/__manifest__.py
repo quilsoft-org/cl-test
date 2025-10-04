@@ -13,8 +13,7 @@
     ],
     "assets": {
         "web.assets_backend": [
-            "test18e_default/static/src/components/example.xml",
-            "test18e_default/static/src/components/example.js",
+            "test18e_default/static/src/components/**/*",
         ],
     },
 

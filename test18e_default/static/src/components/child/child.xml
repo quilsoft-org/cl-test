@@ -1,0 +1,8 @@
+<templates>
+    <t t-name="test18e_default.Child" owl="1">
+        <p><t t-out="props.title"/></p>
+        <button class="btn btn-primary">
+            Click me!
+        </button> 
+    </t>
+</templates>
