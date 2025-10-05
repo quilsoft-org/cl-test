@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_owl_welcome_component" model="ir.actions.client">
+            <field name="name">Owl Welcome Action</field>
+            <field name="tag">owl_welcome_component</field>     <!-- This should match the component's name registered in JavaScript -->
+            <field name="target">current</field>
+        </record>
+
+        <menuitem
+            id="menu_owl_welcome"
+            name="Owl Welcome"
+            parent="contacts.menu_contacts"
+            action="action_owl_welcome_component"
+            sequence="10"/>
+    </data>
+</odoo>
