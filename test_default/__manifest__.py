@@ -9,7 +9,7 @@
     "name": "test19",
     "version": "19.0.1.0.0",
     "category": "Tools",
-    "summary": "Test for v19 CE",
+    "summary": "Test for v19 EE",
     "author": "Quilsoft",
     "website": "http://github.com/jobiols/cl-test",
     "license": "AGPL-3",
@@ -18,7 +18,7 @@
     # manifest version, if omitted it is backward compatible
     "env-ver": "2",
     # if Enterprise it installs in a different directory than community
-    "odoo-license": "CE",
+    "odoo-license": "EE",
 
     'config': [
 
@@ -93,10 +93,10 @@
         "workers = 0",
         "admin_password = admin",
     ],
-    
+
     "port": "8069",
     "git-repos": [
-        "git@github.com:quilsoft-org/cl-test.git -b 19.0",
+        "git@github.com:quilsoft-org/cl-test.git -b 19.0e",
     ],
 
     # list of images to use in the form 'name image-url'
