@@ -1,0 +1,119 @@
+services:
+
+  traefik:
+    image: traefik:v3.5.1
+    container_name: traefik
+    restart: unless-stopped
+    labels:
+      # Router global para redirigir todo el tráfico de HTTP (puerto 80) a HTTPS (puerto 443)
+      - "traefik.http.routers.http-catchall.rule=hostregexp(`{host:.+}`)"
+      - "traefik.http.routers.http-catchall.entrypoints=http"
+      - "traefik.http.routers.http-catchall.middlewares=redirect@file"
+    ports:
+      - "80:80"
+      - "443:443"
+    command:
+      - --configFile=/traefik.yml
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./dynamic.yml:/dynamic.yml:ro
+      - ./traefik.yml:/traefik.yml:ro
+      - ./acme.json:/acme.json
+    networks:
+      - odoo-net
+
+  postgres:
+    image: ${POSTGRES_IMAGE}
+    container_name: postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_DB=postgres
+    volumes:
+      - ${base_ar}/postgresql:/var/lib/postgresql/data
+    networks:
+      odoo-net:
+        aliases:
+          - db
+
+  odoo:
+    image: ${ODOO_IMAGE}
+    container_name: odoo
+    restart: unless-stopped
+    # links:
+    #   - postgres:db
+    networks:
+      - odoo-net
+    depends_on:
+      - postgres
+      - traefik
+    command:
+      - --db-filter=${cliente}_prod
+    volumes:
+      - ${base_ar}/config:/opt/odoo/etc/
+      - ${base_ar}/data_dir:/opt/odoo/data
+      - ${base_ar}/log:/var/log/odoo
+      - ${base_ar}/sources:/opt/odoo/custom-addons
+      - ${base_ar}/backup_dir:/var/odoo/backups/
+    labels:
+      # global config
+        - "traefik.enable=true"
+        - "traefik.docker.network=odoo-net"
+      # main routers 8069 web rule "/*"
+        - "traefik.http.routers.odoo.rule=Host(`${URL}`)"
+        - "traefik.http.routers.odoo.entrypoints=https"
+        - "traefik.http.routers.odoo.tls.certresolver=le"
+        - "traefik.http.routers.odoo.service=odoo"
+        - "traefik.http.routers.odoo.middlewares=gzip@file"
+        - "traefik.http.services.odoo.loadbalancer.server.port=8069"
+       # main routers 8072 websocket rule "/websocket"
+        - "traefik.http.routers.odoo-ws.rule=Path(`/websocket`) && Host(`${URL}`)"
+        - "traefik.http.routers.odoo-ws.entrypoints=https"
+        - "traefik.http.routers.odoo-ws.tls.certresolver=le"
+        - "traefik.http.routers.odoo-ws.middlewares=gzip@file"
+        - "traefik.http.routers.odoo-ws.service=odoo-ws"
+        - "traefik.http.services.odoo-ws.loadbalancer.server.port=8072"
+
+  odoo_worker:
+    image: ${ODOO_IMAGE}
+    container_name: odoo_worker
+    restart: unless-stopped
+    # links:
+    #   - postgres:db
+    networks:
+      - odoo-net
+    depends_on:
+      - postgres
+      - traefik
+    command:
+      - --db-filter=${cliente}_prod
+    volumes:
+      - ${base_ar}/config:/opt/odoo/etc/
+      - ${base_ar}/data_dir:/opt/odoo/data
+      - ${base_ar}/log:/var/log/odoo
+      - ${base_ar}/sources:/opt/odoo/custom-addons
+      - ${base_ar}/backup_dir:/var/odoo/backups/
+    labels:
+      # global config
+        - "traefik.enable=true"
+        - "traefik.docker.network=odoo-net"
+      # main routers 8069 web rule "/*"
+        - "traefik.http.routers.odoo-st.rule=Host(`test-${URL}`)"
+        - "traefik.http.routers.odoo-st.entrypoints=https"
+        - "traefik.http.routers.odoo-st.tls.certresolver=le"
+        - "traefik.http.routers.odoo-st.service=odoo-st"
+        - "traefik.http.routers.odoo-st.middlewares=gzip@file"
+        - "traefik.http.services.odoo-st.loadbalancer.server.port=8069"
+       # main routers 8072 websocket rule "/websocket"
+        - "traefik.http.routers.odoo-st-ws.rule=Path(`/websocket`) && Host(`test-${URL}`)"
+        - "traefik.http.routers.odoo-st-ws.entrypoints=https"
+        - "traefik.http.routers.odoo-st-ws.tls.certresolver=le"
+        - "traefik.http.routers.odoo-st-ws.middlewares=gzip@file"
+        - "traefik.http.routers.odoo-st-ws.service=odoo-st-ws"
+        - "traefik.http.services.odoo-st-ws.loadbalancer.server.port=8072"
+
+networks:
+  odoo-net:
+    name: odoo-net
+    driver: bridge
