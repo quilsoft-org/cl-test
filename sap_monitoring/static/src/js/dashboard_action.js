@@ -1,31 +1,28 @@
 /** @odoo-module **/
-import { registry } from '@web/core/registry';
-import { Component, useState, onWillStart } from '@odoo/owl';
-import { generateMockSeries } from './mock_data';
-import { createLineChart, destroyChart } from './charts';
+import { registry } from "@web/core/registry";
+import { Component, useState, onWillStart } from "@odoo/owl";
+import { generateMockSeries } from "./mock_data";
+import { createLineChart, destroyChart } from "./charts";
 
 class SapMonitoringDashboard extends Component {
     static template = "sap_monitoring.dashboard_template";
 
     setup() {
         this.state = useState({
-            range: 'last_2_days',
+            range: "last_2_days",
             start: null,
             end: null,
         });
-
         this.charts = {};
 
-        // ✅ Correct way to use onWillStart in OWL
         onWillStart(() => {
-            this._applyRange('last_2_days');
+            this._applyRange("last_2_days");
         });
     }
 
-    // ---- Range Handling ----
     _getRangeDates(key) {
         const now = new Date();
-        let start = new Date();
+        const start = new Date(now);
         const ranges = {
             last_24_hours: 1,
             last_2_days: 2,
@@ -44,15 +41,11 @@ class SapMonitoringDashboard extends Component {
         this._renderAllCharts();
     }
 
-    // ---- Charts ----
     _renderAllCharts() {
-        const categories = ['Precios','Clientes','Productos','Preventa','Reparto'];
-
-        Object.values(this.charts).forEach(c => destroyChart(c));
+        const categories = ["Precios", "Clientes", "Productos", "Preventa", "Reparto"];
+        Object.values(this.charts).forEach((c) => destroyChart(c));
         this.charts = {};
-
         const { start, end } = this.state;
-
         categories.forEach((name, i) => {
             const canvas = document.getElementById(`chart_${i}`);
             if (!canvas) return;
@@ -61,10 +54,9 @@ class SapMonitoringDashboard extends Component {
         });
     }
 
-    // ---- UI Events ----
     onChangeRange(ev) {
         this._applyRange(ev.target.value);
     }
 }
 
-registry.category('actions').add('sap_monitoring.dashboard_action', SapMonitoringDashboard);
+registry.category("actions").add("sap_monitoring.dashboard_action", SapMonitoringDashboard);

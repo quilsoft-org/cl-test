@@ -3,7 +3,7 @@
     <t t-name="sap_monitoring.dashboard_template">
         <!-- Load Chart.js from CDN. If your environment blocks CDN, add Chart.js to assets. -->
         <t t-set="cdn">
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
         </t>
 
         <div class="sap-grafana-wrapper">
@@ -12,11 +12,27 @@
                 <div class="sap-range-selector">
                     <label for="range_select">Período:</label>
                     <select id="range_select" t-on-change="onChangeRange">
-                        <option value="last_24_hours">Últimas 24 horas</option>
-                        <option value="last_2_days" selected>Últimos 2 días</option>
-                        <option value="last_7_days">Últimos 7 días</option>
-                        <option value="last_30_days">Último mes</option>
+                        <option value="last_24_hours"
+                                t-att-selected="state.range === 'last_24_hours' and 'selected' or undefined">
+                            Últimas 24 horas
+                        </option>
+
+                        <option value="last_2_days"
+                                t-att-selected="state.range === 'last_2_days' and 'selected' or undefined">
+                            Últimos 2 días
+                        </option>
+
+                        <option value="last_7_days"
+                                t-att-selected="state.range === 'last_7_days' and 'selected' or undefined">
+                            Últimos 7 días
+                        </option>
+
+                        <option value="last_30_days"
+                                t-att-selected="state.range === 'last_30_days' and 'selected' or undefined">
+                            Último mes
+                        </option>
                     </select>
+
                 </div>
             </div>
 

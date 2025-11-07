@@ -1,16 +1,18 @@
 /* Grafana-like dark theme */
 .sap-grafana-wrapper {
-    background: #0f1720;
-    color: #c8d0d8;
-    padding: 18px;
-    min-height: 100vh;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* El scroll va a ir en .sap-cards */
 }
 .sap-header {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:12px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #1e1e1e;
+    padding: 16px;
+    border-bottom: 1px solid #444;
 }
 .sap-title {
     margin:0;
@@ -25,7 +27,12 @@
     padding:6px 8px;
     border-radius:4px;
 }
-.sap-cards { display:flex; flex-direction:column; gap:12px; }
+/* Contenedor donde SI hay scroll */
+.sap-cards {
+    overflow-y: auto;
+    flex-grow: 1;
+    padding-right: 8px;
+}
 .sap-card {
     background: linear-gradient(180deg, #0b1116, #0d141a);
     border: 1px solid rgba(255,255,255,0.03);
