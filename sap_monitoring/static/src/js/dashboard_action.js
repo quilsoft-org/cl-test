@@ -50,7 +50,22 @@ class SapMonitoringDashboard extends Component {
             const canvas = document.getElementById(`chart_${i}`);
             if (!canvas) return;
             const series = generateMockSeries(start, end, 30, 200, 60);
-            this.charts[i] = createLineChart(canvas, name, series.labels, series.values);
+            const limitProfiles = [
+                { green: 180, yellow: 120, red: 60 },   // Precios
+                { green: 300, yellow: 200, red: 100 }, // Clientes
+                { green: 90,  yellow: 60,  red: 30 },  // Productos
+                { green: 140, yellow: 90,  red: 50 },  // Preventa
+                { green: 80,  yellow: 50,  red: 20 },  // Reparto
+            ];
+
+            this.charts[i] = createLineChart(
+                canvas,
+                name,
+                series.labels,
+                series.values,
+                limitProfiles[i]
+            );
+
         });
     }
 
