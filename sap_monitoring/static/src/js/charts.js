@@ -19,10 +19,13 @@ export function createLineChart(canvas, title, labels, values) {
                 {
                     label: title,
                     data: values,
-                    borderWidth: 1.5,           // ← línea fina
-                    pointRadius: 3,             // ← puntos visibles y pequeños
-                    pointHoverRadius: 6,        // ← puntos grandes al hover
-                    tension: 0.3,               // ← suavizado agradable
+                    borderColor: "#4ea6f6",  // Azul principal Grafana
+                    backgroundColor: "rgba(78,166,246,0.15)",
+                    borderWidth: 1.6,
+                    pointRadius: 3,
+                    pointBackgroundColor: "#4ea6f6",
+                    pointHoverRadius: 6,
+                    tension: 0.35,
                 },
             ],
         },
