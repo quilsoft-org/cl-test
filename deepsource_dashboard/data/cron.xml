@@ -1,0 +1,11 @@
+<odoo>
+  <record id="ir_cron_deepsource_sync" model="ir.cron">
+    <field name="name">Sync DeepSource Issues</field>
+    <field name="model_id" ref="model_deepsource_sync"/>
+    <field name="state">code</field>
+    <field name="code">model.sync_issues()</field>
+    <field name="interval_number">1</field>
+    <field name="interval_type">days</field>
+    <field name="active">True</field>
+  </record>
+</odoo>

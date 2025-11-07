@@ -1,0 +1,70 @@
+/** @odoo-module **/
+import { registry } from '@web/core/registry';
+import { Component, useState, onWillStart } from '@odoo/owl';
+import { generateMockSeries } from './mock_data';
+import { createLineChart, destroyChart } from './charts';
+
+class SapMonitoringDashboard extends Component {
+    static template = "sap_monitoring.dashboard_template";
+
+    setup() {
+        this.state = useState({
+            range: 'last_2_days',
+            start: null,
+            end: null,
+        });
+
+        this.charts = {};
+
+        // ✅ Correct way to use onWillStart in OWL
+        onWillStart(() => {
+            this._applyRange('last_2_days');
+        });
+    }
+
+    // ---- Range Handling ----
+    _getRangeDates(key) {
+        const now = new Date();
+        let start = new Date();
+        const ranges = {
+            last_24_hours: 1,
+            last_2_days: 2,
+            last_7_days: 7,
+            last_30_days: 30,
+        };
+        start.setDate(now.getDate() - (ranges[key] || 2));
+        return { start, end: now };
+    }
+
+    _applyRange(key) {
+        const { start, end } = this._getRangeDates(key);
+        this.state.range = key;
+        this.state.start = start;
+        this.state.end = end;
+        this._renderAllCharts();
+    }
+
+    // ---- Charts ----
+    _renderAllCharts() {
+        const categories = ['Precios','Clientes','Productos','Preventa','Reparto'];
+
+        Object.values(this.charts).forEach(c => destroyChart(c));
+        this.charts = {};
+
+        const { start, end } = this.state;
+
+        categories.forEach((name, i) => {
+            const canvas = document.getElementById(`chart_${i}`);
+            if (!canvas) return;
+            const series = generateMockSeries(start, end, 30, 200, 60);
+            this.charts[i] = createLineChart(canvas, name, series.labels, series.values);
+        });
+    }
+
+    // ---- UI Events ----
+    onChangeRange(ev) {
+        this._applyRange(ev.target.value);
+    }
+}
+
+registry.category('actions').add('sap_monitoring.dashboard_action', SapMonitoringDashboard);

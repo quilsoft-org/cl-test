@@ -1,0 +1,21 @@
+<odoo>
+    <record id="view_deepsource_issue_tree" model="ir.ui.view">
+        <field name="name">deepsource.issue.tree</field>
+        <field name="model">deepsource.issue</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="title"/>
+                <field name="severity"/>
+                <field name="category"/>
+                <field name="link"/>
+                <field name="fetched_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_deepsource_issue" model="ir.actions.act_window">
+        <field name="name">DeepSource Issues</field>
+        <field name="res_model">deepsource.issue</field>
+        <field name="view_mode">tree</field>
+    </record>
+</odoo>

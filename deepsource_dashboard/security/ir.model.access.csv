@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+deepsource_dashboard.access_deepsource_issue,access_deepsource_issue,deepsource_dashboard.model_deepsource_issue,base.group_user,1,1,1,1
+deepsource_dashboard.access_deepsource_stat,access_deepsource_stat,deepsource_dashboard.model_deepsource_stat,base.group_user,1,1,1,1
+deepsource_dashboard.access_deepsource_sync,access_deepsource_sync,deepsource_dashboard.model_deepsource_sync,base.group_user,1,1,1,1

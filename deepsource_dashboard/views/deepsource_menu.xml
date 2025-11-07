@@ -1,0 +1,21 @@
+<odoo>
+    <!-- Menú raíz -->
+    <menuitem id="menu_deepsource_root"
+              name="DeepSource"
+              parent="base.menu_custom"
+              sequence="50"/>
+
+    <!-- Submenú Issues -->
+    <menuitem id="menu_deepsource_issue"
+              name="Issues"
+              parent="menu_deepsource_root"
+              action="action_deepsource_issue"
+              sequence="10"/>
+
+    <!-- Submenú Tendencia -->
+    <menuitem id="menu_deepsource_stats"
+              name="Tendencia"
+              parent="menu_deepsource_root"
+              action="action_deepsource_stat"
+              sequence="20"/>
+</odoo>

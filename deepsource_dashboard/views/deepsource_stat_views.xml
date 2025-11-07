@@ -1,0 +1,20 @@
+<odoo>
+    <record id="view_deepsource_stat_graph" model="ir.ui.view">
+        <field name="name">deepsource.stat.graph</field>
+        <field name="model">deepsource.stat</field>
+        <field name="arch" type="xml">
+            <graph string="DeepSource Trend" type="bar">
+                <field name="date"/>
+                <field name="critical"/>
+                <field name="major"/>
+                <field name="minor"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="action_deepsource_stat" model="ir.actions.act_window">
+        <field name="name">DeepSource Trend</field>
+        <field name="res_model">deepsource.stat</field>
+        <field name="view_mode">graph,tree</field>
+    </record>
+</odoo>

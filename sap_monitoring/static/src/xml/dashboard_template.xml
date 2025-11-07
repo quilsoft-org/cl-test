@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates xml:space="preserve">
+    <t t-name="sap_monitoring.dashboard_template">
+        <!-- Load Chart.js from CDN. If your environment blocks CDN, add Chart.js to assets. -->
+        <t t-set="cdn">
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        </t>
+
+        <div class="sap-grafana-wrapper">
+            <div class="sap-header">
+                <h1 class="sap-title">SAP Monitoring — Mock Dashboard</h1>
+                <div class="sap-range-selector">
+                    <label for="range_select">Período:</label>
+                    <select id="range_select" t-on-change="onChangeRange">
+                        <option value="last_24_hours">Últimas 24 horas</option>
+                        <option value="last_2_days" selected>Últimos 2 días</option>
+                        <option value="last_7_days">Últimos 7 días</option>
+                        <option value="last_30_days">Último mes</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="sap-cards">
+                <div class="sap-card">
+                    <div class="sap-card-title">Precios</div>
+                    <div class="sap-card-body">
+                        <canvas id="chart_0" class="sap-chart-canvas"></canvas>
+                    </div>
+                </div>
+
+                <div class="sap-card">
+                    <div class="sap-card-title">Clientes</div>
+                    <div class="sap-card-body">
+                        <canvas id="chart_1" class="sap-chart-canvas"></canvas>
+                    </div>
+                </div>
+
+                <div class="sap-card">
+                    <div class="sap-card-title">Productos</div>
+                    <div class="sap-card-body">
+                        <canvas id="chart_2" class="sap-chart-canvas"></canvas>
+                    </div>
+                </div>
+
+                <div class="sap-card">
+                    <div class="sap-card-title">Preventa</div>
+                    <div class="sap-card-body">
+                        <canvas id="chart_3" class="sap-chart-canvas"></canvas>
+                    </div>
+                </div>
+
+                <div class="sap-card">
+                    <div class="sap-card-title">Reparto</div>
+                    <div class="sap-card-body">
+                        <canvas id="chart_4" class="sap-chart-canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

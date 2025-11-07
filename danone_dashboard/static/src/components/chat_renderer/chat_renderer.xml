@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <div t-name="sap_monitoring_dashboard.ChartRenderer" class="chart-container" style="position: relative; height: 40vh; width: 100%;">
+        <canvas t-ref="chart_canvas"></canvas>
+    </div>
+</templates>

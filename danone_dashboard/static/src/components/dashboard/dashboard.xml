@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <div t-name="sap_monitoring_dashboard.SapMonitoringDashboard" class="o_sap_dashboard p-4" style="background-color: #f0f2f5;">
+        <!-- Fila de Encabezado y Selector de Período -->
+        <div class="d-flex justify-content-between align-items-center mb-4 p-3 bg-white rounded shadow-sm">
+            <h1 class="h3 mb-0 text-primary">Dashboard de Monitoreo de Datos SAP</h1>
+            <div class="d-flex align-items-center">
+                <label for="timeRangeSelector" class="form-label me-2 mb-0"><strong>Período:</strong></label>
+                <select id="timeRangeSelector" class="form-select form-select-sm" t-on-change="onTimeRangeChange">
+                    <option value="last_24_hours" t-att-selected="state.timeRange === 'last_24_hours'">Últimas 24 horas</option>
+                    <option value="last_2_days" t-att-selected="state.timeRange === 'last_2_days'">Últimos 2 días</option>
+                    <option value="last_7_days" t-att-selected="state.timeRange === 'last_7_days'">Últimos 7 días</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Contenedor de los Gráficos -->
+        <div class="row g-4">
+            <t t-foreach="entities" t-as="entity" t-key="entity.key">
+                 <div class="col-12">
+                    <div class="bg-white p-3 rounded shadow-sm">
+                        <ChartRenderer title="entity.key" chartData="state.chartData[entity.key]"/>
+                    </div>
+                </div>
+            </t>
+        </div>
+    </div>
+</templates>
