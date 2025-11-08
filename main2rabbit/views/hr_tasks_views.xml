@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Vista de Lista (list) para hr.tasks -->
+        <!-- CAMBIO: Se usa <list> en lugar de la etiqueta obsoleta <list> -->
+        <record id="hr_tasks_view_list" model="ir.ui.view">
+            <field name="name">hr.tasks.list</field>
+            <field name="model">hr.tasks</field>
+            <field name="arch" type="xml">
+                <list string="Payroll Tasks">
+                    <field name="employee_data"/>
+                    <field name="state"/>
+                    <field name="error_message" optional="hide"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Vista de Formulario (Form) para hr.tasks -->
+        <record id="hr_tasks_view_form" model="ir.ui.view">
+            <field name="name">hr.tasks.form</field>
+            <field name="model">hr.tasks</field>
+            <field name="arch" type="xml">
+                <form string="Payroll Task">
+                    <sheet>
+                        <group>
+                            <field name="employee_data"/>
+                            <field name="state"/>
+                            <!-- CAMBIO: Se usa la sintaxis directa 'invisible' de v17 en lugar de 'attrs' -->
+                            <field name="error_message" invisible="state != 'error'"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- ====================================================== -->
+        <!--      ACCIÓN DE SERVIDOR para procesar las tareas       -->
+        <!-- ====================================================== -->
+        <!-- Esta parte no requiere cambios, la sintaxis sigue siendo válida en v17 -->
+        <record id="action_send_tasks_to_worker" model="ir.actions.server">
+            <field name="name">Enviar tareas al Worker</field>
+            <field name="model_id" ref="model_hr_tasks"/>
+            <field name="binding_model_id" ref="model_hr_tasks"/>
+            <field name="state">code</field>
+            <field name="code">
+# 'action' es una variable de entorno disponible en las acciones de servidor.
+# 'records' contiene el conjunto de registros seleccionados por el usuario.
+records.send_tasks_to_worker()
+            </field>
+        </record>
+
+
+        <!-- Acción de Ventana (Window Action) -->
+        <!-- Esta acción no requiere cambios. Se ajusta 'view_mode' para reflejar el cambio de list a list -->
+        <record id="hr_tasks_action" model="ir.actions.act_window">
+            <field name="name">Tareas de Procesamiento</field>
+            <field name="res_model">hr.tasks</field>
+            <!-- Se ajusta view_mode para ser más explícito con el nombre de la vista list -->
+            <field name="view_mode">list,form</field>
+        </record>
+
+    </data>
+</odoo>
