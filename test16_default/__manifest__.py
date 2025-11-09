@@ -39,7 +39,7 @@
     ],
     "port": "8069",
     "git-repos": [
-        "git@github.com:quilsoft-org/cl-test.git -b 16.0",
+        "git@github.com:quilsoft-org/cl-test.git",
     ],
     # list of images to use in the form 'name image-url'
     "docker-images": [

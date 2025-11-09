@@ -1,0 +1,52 @@
+services:
+  postgres:
+    image: postgres:15.1-alpine
+    container_name: postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_DB=postgres
+    volumes:
+      - /odoo/ar/odoo-16.0/test16/postgresql:/var/lib/postgresql/data
+    networks:
+      default:
+        aliases:
+          - db
+
+  odoo:
+    image: jobiols/odoo-jeo:16.0.debug
+    container_name: odoo
+    restart: unless-stopped
+    ports:
+      - "8069:8069"
+      - "5678:5678"
+    environment:
+      - WDB_SOCKET_SERVER=wdb
+      - WDB_NO_BROWSER_AUTO_OPEN=True
+#    command: python3 -m debugpy --listen 0.0.0.0:5678 --wait-for-client /usr/bin/odoo -c /opt/odoo/etc/odoo.conf
+    volumes:
+      - /odoo/ar/odoo-16.0/test16/config:/opt/odoo/etc/
+      - /odoo/ar/odoo-16.0/test16/data_dir:/opt/odoo/data
+      - /odoo/ar/odoo-16.0/test16/log:/var/log/odoo
+      - /odoo/ar/odoo-16.0/test16/sources:/opt/odoo/custom-addons
+      - /odoo/ar/odoo-16.0/test16/backup_dir:/var/odoo/backups/
+      - /odoo/ar/odoo-16.0/dist-packages:/usr/lib/python3/dist-packages
+      - /odoo/ar/odoo-16.0/dist-local-packages:/usr/local/lib/python3.9/dist-packages
+
+    networks:
+      - default
+
+
+  wdb:
+    image: jobiols/wdb:3.3.1
+    container_name: wdb
+    restart: unless-stopped
+    ports:
+      - "1984:1984"
+    networks:
+      - default
+
+networks:
+  default:
+    name: odoo-net

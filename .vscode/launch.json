@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Odoo Debug",
+      "type": "python",
+      "request": "attach",
+      "connect": {
+        "host": "localhost",
+        "port": 5678
+      },
+      "pathMappings": [
+        {
+          "localRoot": "/odoo/ar/odoo-16.0/test16/sources/",
+          "remoteRoot": "/opt/odoo/custom-addons"
+        }
+        {
+          "localRoot": "/odoo/ar/odoo-16.0/dist-packages",
+          "remoteRoot": "/usr/lib/python3/dist-packages"
+        }
+      ],
+      "justMyCode": false,
+    }
+  ]
+}
