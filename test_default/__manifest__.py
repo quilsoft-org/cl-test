@@ -89,7 +89,7 @@
     ],
 
     # Config to write in odoo.conf
-    "config_local": [
+    "config-local": [
         "workers = 0",
         "admin_password = admin",
     ],
